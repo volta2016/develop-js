@@ -12,3 +12,4 @@ function show() {
 	alert("la útima letra de su apellido es:" + apellido.value.charAt(apellido.value.length - 1));
 	console.log(nombre_b);
 }
+console.log(ultimaLetra)
