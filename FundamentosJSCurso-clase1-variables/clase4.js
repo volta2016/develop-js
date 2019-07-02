@@ -1,4 +1,5 @@
-var nombre = `Sacha`, edad = `28`
+var nombre = prompt(`imgrese el nombre`)
+var edad = prompt(`ingrese la edad`)
 
 function imprimirEdad(n, e) {
 	console.log(`${n} tiene ${e} años`)
