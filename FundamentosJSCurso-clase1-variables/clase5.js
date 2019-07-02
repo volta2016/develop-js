@@ -11,10 +11,14 @@ imprimirNombreEnMayuscula(nombre)
 var nombreMusica = 'JAZZ'
 
 function imprimirMusicaMinuscula(nombreMusica) {
-	nombreMusica.toLowerCase()
-	console.log(`impresion de nombre dentro de la funcion ${nombreMusica}`)
-	console.log(`impresion de nombre Global dentro  ${window.nombreMusica}`)
-	console.log(`Su ultima letra es ${nombre.charAt(3)}`)
+	var minus = nombreMusica.toLowerCase()
+	console.log(`en minuscula ${minus}`)
+	console.log(`impresion de nombre local dentro de la funcion ${nombreMusica}`)
+	console.log(`impresion de nombre Global dentro de la funcion ${window.nombreMusica}`)
+	console.log(`Su ultima letra es ${nombreMusica.charAt(3)}`)
+	console.log(`su primeras 2 letras ${nombreMusica.substr(0,2)}`)
+
+	//forma de concatenar con template literals
 } 
 imprimirMusicaMinuscula(nombreMusica)
-console.log('impresion fuera de la funcion' + nombreMusica)
+console.log(`impresion fuera de la funcion` + nombreMusica)
