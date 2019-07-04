@@ -9,6 +9,17 @@ var itachi = {
 	edad : 21
 }
 
+//función destructurar obj
+function imprimirNombreEnMayuscula(persona) {
+	//var nombre = persona.nombre
+	var {nombre} = persona
+	var {apellido} = persona
+	var {edad} = persona
+	console.log(`hola me llamo ${nombre} ${apellido} y tengo y tengo ${edad} `)
+
+}
+
+
 // function imprimirNombreEnMayuscula(persona) {
 // 	console.log(persona.nombre.toUpperCase())
 // }
@@ -16,16 +27,16 @@ var itachi = {
 //al atributo - Abajo imprimimos la función 
 
 //función que recibe la propiedad de objeto como parametro
-function imprimirNombreEnMayuscula2({ nombre }) {
-	console.log(nombre.toUpperCase())
-}
+// function imprimirNombreEnMayuscula2({ nombre }) {
+// 	console.log(nombre.toUpperCase())
+// }
 //aca colocamos el nombre de los atributos que nos interesa en este 
 //caso el nombre, entonces acá ya persona no existe
 
 //funcion que recibe objeto como parametro
-function imprimirNombreEnMayuscula(persona){
-  console.log(`Hola, mi nombre es ${persona.nombre.toUpperCase()} ${persona.apellido.toUpperCase()} y tengo ${persona.edad} años`)
-}
+// function imprimirNombreEnMayuscula(persona){
+//   console.log(`Hola, mi nombre es ${persona.nombre.toUpperCase()} ${persona.apellido.toUpperCase()} y tengo ${persona.edad} años`)
+// }
 
 //funcion que recibe mas de una propiedad de objeto como parametro
 // function imprimirNombreEnMayuscula({nombre, apellido, edad}){
@@ -40,7 +51,7 @@ imprimirNombreEnMayuscula(sasuke)
 
 imprimirNombreEnMayuscula(itachi)
 //podemos definir un un objeto acá mismo
-imprimirNombreEnMayuscula2({nombre: 'Kakashi' })
+// imprimirNombreEnMayuscula2({nombre: 'Kakashi' })
 // imprimirNombreEnMayuscula({apellido: 'Gomez'})
 //no va correr por el objeto que le pasamos 
 //no tiene el atributo nombre
