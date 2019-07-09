@@ -19,7 +19,7 @@ var otraPersona = {
 
 //modificamos otra persona, tienen los mismos valores pero apuntan a 
 //a diferentes direcciones en momoria ram kyo se sigue llamando kyo
-// y otraPersona el valor que midifcamos que fue este otraPersona.nombre = 'Pepe'
+// y otraPersona el valor que midificamos que fue este otraPersona.nombre = 'Pepe'
 //cambia kyo por Pepe
 
 

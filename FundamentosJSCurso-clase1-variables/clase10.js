@@ -35,10 +35,13 @@ function imprimirProfesiones(persona) {
 	}
 }
 function imprimirSiEsMayorDeEdad(persona){
+	//var {nombre} = persona
+	console.log(`¿Es menor o mayor de edad?`)
 	if (persona.edad >= 18 ){
-		console.log('Kyo mayor de edad')
+
+		console.log(`${persona.nombre} es mayor de edad`)
 	} else {
-		console.log('Kyo Eres menor de edad')
+		console.log(`${persona.nombre} es menor de edad`)
 	}
 
 }
