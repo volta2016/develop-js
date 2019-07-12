@@ -41,6 +41,10 @@ function imprimirProfesiones(persona) {
 }
 const MAYORIA_DE_EDAD = 18
 
+function esMayorDeEdad(persona) {
+	return persona.edad >= MAYORIA_DE_EDAD
+}
+
 function imprimirSiEsMayorDeEdad(persona){
 	//var {nombre} = persona
 	console.log(`¿Es menor o mayor de edad?`)
@@ -53,9 +57,6 @@ function imprimirSiEsMayorDeEdad(persona){
 
 }
 
-function esMayorDeEdad(persona) {
-	return persona.edad >= MAYORIA_DE_EDAD
-}
 
 imprimirProfesiones(kyo)
 imprimirSiEsMayorDeEdad(kyo)
