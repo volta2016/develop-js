@@ -26,7 +26,7 @@ function imprimirNombreEnMayuscula(persona) {
 // }
 //Acá podemos ver que la función sabe que tiene que acceder 
 //al atributo - Abajo imprimimos la función 
-
+//______esto es desglosar el objeto._____________
 //función que recibe la propiedad de objeto como parametro NO ES NECESARIO PASARLE PERSONA
 // function imprimirNombreEnMayuscula2({ nombre }) {
 // 	console.log(nombre.toUpperCase())

@@ -25,7 +25,7 @@ function imprimirNombreEnMayuscula(persona) {
 imprimirNombreEnMayuscula(sasuke)
 imprimirNombreEnMayuscula(itachi)
 //imprime la funcion en consola
-
+//lo que estamos haciendo es crear un nuevi objeto modificado
 function cumpleanos(persona){
 	return {
 		...persona,
