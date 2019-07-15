@@ -8,7 +8,7 @@ console.log(`Al inicio del año ${kyo.nombre} pesa ${kyo.peso}kg`)
 
 //aumentar de peso va a ser una una función, los parametros van entre parentesis que va 
 //a recibir una persona y un incremento => y lo que va hacer es 
-//persona punto peso += incremento.
+//persona punto peso += incremento es decir le va a retornar un valor.
 
 // function aumentarDePeso (persona) {
 // 	return persona.peso +=200
