@@ -38,9 +38,10 @@ const META = kyo.peso - 3
 var dias = 0
 //como funciona el while es que el codigo que esta entre llaves se va repetir siempre 
 //que esta condicion se cumpla entre los parenstesis vamos poner esa condicion y mientra que
-//sea verdadera entonces el cdigo entre llaaves se va a repetir
+//sea verdadera entonces el código entre llaves se va a repetir (miestras el peso de kyo
+//este por arriba de la meta este code se va a repetir)
 while (kyo.peso > META) {
-	
+	// debugger
 	if (comeMucho()) {
 		aumentarDePeso(kyo)
 	}

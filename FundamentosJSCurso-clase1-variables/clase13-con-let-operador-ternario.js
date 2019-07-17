@@ -33,10 +33,9 @@ console.log(puedeVotar)
 
 
 var diferencia = ({peso}) => peso > pesoInicial ? `subiste ${(peso - pesoInicial).toFixed(1)}kg` : `bajaste ${(pesoInicial - peso).toFixed(1)}kg`
-// lo que estas haciendo en esta parte es declarar un arrow function retornando el valor si 
-//peso del objeto es mayor igual a peso inicial, luego en el strings aplicas si subiste o si bajas 
-//pero que pasa aqui con los 2 puntos muestras uno de los 2 resultados, o uno se asigna a la var
-//diferencia no entiendo ese resultado.
+//es un operador ternario con una condicion donde toma el peso del objeto
+//pregunta si se cumple que peso > a pesoInicial si cumple toma subiste peso - pesoInicial 
+//si bajaste pesoInicial - peso entrega la difencia de kg de lo que sube o bajas.
 
 // imprimir resultado
 console.log(`Al final del año ${kyo.nombre} pesa ${kyo.peso.toFixed(1)}kg y ${diferencia(kyo)}`)

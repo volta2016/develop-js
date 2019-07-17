@@ -10,13 +10,13 @@ console.log(`Al inicio del año ${kyo.nombre} pesa ${kyo.peso}kg`)
 //a recibir una persona y un incremento => y lo que va hacer es 
 //persona punto peso += incremento es decir le va a retornar un valor.
 
+const INCREMENTO_PESO = 0.2
+const DIAS_DEL_ANO = 365
+
 // function aumentarDePeso (persona) {
 // 	return persona.peso +=200
 // }
 // el arrow function es lo misma funcion que esta arriba
-const INCREMENTO_PESO = 0.2
-const DIAS_DEL_ANO = 365
-
 const aumentarDePeso = (persona) => persona.peso += INCREMENTO_PESO
 const adelgazarDePeso = (persona) => persona.peso -= INCREMENTO_PESO
 // como vimos anteriormente 200 son magic number no sabemos bn de donde salen.
@@ -26,6 +26,7 @@ const adelgazarDePeso = (persona) => persona.peso -= INCREMENTO_PESO
 
 for (var i = 1; i <= DIAS_DEL_ANO; i++) {
 	var random = Math.random()
+	
 	if (random < 0.25) {
 		aumentarDePeso(kyo)
 	} else if (random < 0.5){

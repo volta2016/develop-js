@@ -52,6 +52,14 @@ function imprimirSiEsMayorDeEdad(persona){
 	}
 
 }
+// ____otra forma de imprimirSiEsMayorDeEdad con else if___
+// function imprimirSiEsMayorDeEdad(persona) {
+//   if (esMayorDeEdad(persona)) {
+//     console.log(`${persona.nombre} es mayor de edad.`)
+//   } else if (esMenorDeEdad(persona)) {
+//     console.log(`${persona.nombre} es menor de edad.`)
+//   }
+// }
 
 // const esMayorDeEdad = function (persona) {
 // 	return persona.edad >= MAYORIA_DE_EDAD
@@ -66,7 +74,8 @@ const esMenorDeEdad = ({edad}) => edad < MAYORIA_DE_EDAD
 //lo que estamos haciendo es que a la funcion es esMenorDeEdad le pasamos una funcion
 //que le vamos a pasar el objeto edad, luego => quiere decir que se aplica la función
 //como una arrow function, esto va retornar si es menor  MAYORIA_DE_EDAD
-
+// otra forma de const en la cual aplico no esMayorDeEdad
+// const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
 
 //aquí aplico la funcion al if solo aplicando el nombre de la const
 function permitirAccesoDesafio(persona)  {
@@ -77,12 +86,14 @@ function permitirAccesoDesafio(persona)  {
 		console.log("Acceso Permitido")
 	}
 }
+//tambien puede ser de estas 2 formas el denegaracceso
 // denegar Acceso
 // function permitirAcceso(persona) {
 // 	if (!esMayorDeEdad(persona)) {
 // 		console.log("acceso denegado")
 // 	}
 // }
+
 imprimirProfesiones(kyo)
 imprimirSiEsMayorDeEdad(kyo)
 imprimirSiEsMayorDeEdad(Fukui)
