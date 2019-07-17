@@ -62,20 +62,18 @@ const esMayorDeEdad =  ({edad}) => edad >= MAYORIA_DE_EDAD
 //que le vamos a pasar un objeto que tiene una edad ({edad}) y nos va retornar si esa
 //edad es mayor e igual de edad a la const MAYORIA_DE_EDAD = 18 que es una constante que en este 
 //caso va a ser 18
-const esMenorDeEdad = ({edad}) => edad >= !esMayorDeEdad({edad})
+const esMenorDeEdad = ({edad}) => edad < MAYORIA_DE_EDAD
 //lo que estamos haciendo es que a la funcion es esMenorDeEdad le pasamos una funcion
 //que le vamos a pasar el objeto edad, luego => quiere decir que se aplica la función
-//como una arrow function, esto no va a retornar si esa edad es mayor e igual pero aquí
-//el parametro ! quiere decir si no esMayorDeEdad que en este caso es >= a 18 edad 
-//esMenorDeEdad
+//como una arrow function, esto va retornar si es menor  MAYORIA_DE_EDAD
 
 
 //aquí aplico la funcion al if solo aplicando el nombre de la const
 function permitirAccesoDesafio(persona)  {
-	if (esMenorDeEdad(persona)){
+	if (!esMayorDeEdad(persona)){
 		console.log("Acceso Denegado")
 	} 
-	if (esMayorDeEdad(persona)) {
+	if (!esMenorDeEdad(persona)) {
 		console.log("Acceso Permitido")
 	}
 }
@@ -87,6 +85,7 @@ function permitirAccesoDesafio(persona)  {
 // }
 imprimirProfesiones(kyo)
 imprimirSiEsMayorDeEdad(kyo)
+imprimirSiEsMayorDeEdad(Fukui)
 //Mejorar code
 // function ImprimirSiEsMenorDeEdad (persona) {
 // 	if (esMenorDeEdad(persona) >= esMenorDeEdad) {
