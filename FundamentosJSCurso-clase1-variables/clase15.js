@@ -12,27 +12,30 @@ do {
 	contador++
 } while (!llueve())
 
-// if (contador === 1) {
-// 	console.log(`fui a ver si llovia ${contador}vez`)
-// } else {
-// 	console.log(`fui a ver si llovia ${contador}veces`)
-// }
-//otra forma
-if(contador != 1){
-    console.log(`fui a ver si llovía ${contador} veces`)
-    
+if (contador === 1) {
+	console.log(`fui a ver si llovia ${contador}vez`)
 } else {
-    console.log(`fui a ver si llovía ${contador} vez`)
-
+	console.log(`fui a ver si llovia ${contador}veces`)
 }
-contador === 1 ? console.log(`Fui a ver si llovia ${contador}vez`) : console.log(`Fui a ver si llovia ${contador}veces`)
-//verificar code
-console.log(`Fui a ver si llovía ${contador}${contador > 1 ? 'veces' : 'vez'}`)
-
 // el do donde se encuentra contador++ 
 // esto se va a repetir mientras llueva.
 // entonces acá podemos negar la condicion de que !llueve
 // si "no" llueve do se va ejecutar de nuevo, si no llueve
 // va dejar de ejecutar y va entrar el programa en la linea
 // 11
+//otra forma
+// if(contador != 1){
+//     console.log(`fui a ver si llovía ${contador} veces`)
+    
+// } else {
+//     console.log(`fui a ver si llovía ${contador} vez`)
+
+// }
+
+// operador condicional ternario
+// contador === 1 ? console.log(`Fui a ver si llovia ${contador}vez`) : console.log(`Fui a ver si llovia ${contador}veces`)
+//verificar code
+// console.log(`Fui a ver si llovía ${contador}${contador > 1 ? 'veces' : 'vez'}`)
+
+
 
