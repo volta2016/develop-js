@@ -69,7 +69,7 @@ var personas = [sacha, alan, martin, dario, vicky, paula]
 var personasAltas = personas.filter(esAlta)
 var personasBajas = personas.filter(esBaja)
 //forma no mas proliga como funcion
-// var personasBajas = personas.filter(esBaja = ({altura}) => altura <= 1.79 )
+// var personasBajas = personas.filter(esBaja = ({altura}) => altura <= 1.79)
 
 
 
