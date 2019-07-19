@@ -14,7 +14,7 @@ var alan = {
     altura: 1.86
 }
 var martin = {
-    nombre: 'Alan',
+    nombre: 'Martín',
     apellido: 'Perez',
     altura: 1.85
 }
@@ -42,12 +42,15 @@ var paula = {
 var personas = [sacha, alan, martin, dario, vicky, paula]
 
 //Entonces para recorrerlo podemos hacer un ciclo for
-//la propiedad length no va inidcar cuantos elementos tiene.
-// y luego lo que va hacer es ir guardandandolo por cada una vez que ejecutamos esto
-// cada una de las personas utilizando el indice [i]que estamos usando en for
-// para acceder a cada una de ellas que esta declara en la var persona. 
+//podemos comenzar nuesro contador en 0
+//la propiedad length nos va inidcar cuantos elementos tiene(la cantidad de personas que aya)
+ 
+//luego lo que va hacer es ir guardandandolo por cada una vez que ejecutamos esto
+//cada una de las personas utilizando el indice [i]que estamos usando en for
+//para acceder a cada una de ellas que esta declara en la var persona. 
+//despues accedemos al objeto como template string
 for (var i = 0; i < personas.length; ++i){
   var persona = personas[i]
-  console.log(`${persona.nombre} mide ${persona.altura}mts`)
+  console.log(`${persona.nombre} mide ${persona.altura} mts`)
 }
 
