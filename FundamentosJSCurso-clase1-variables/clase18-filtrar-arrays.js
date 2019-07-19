@@ -34,7 +34,7 @@ var vicky = {
 var paula = {
     nombre: 'Paula',
     apellido: 'Barros',
-    altura: 1.76
+    altura: 1.6
 }
 //definimos el arrow function esta condicion va ir resiviendo, cada uno
 //de los elementos del array.Entonces filter va  iterar por nosotros el array
@@ -46,10 +46,13 @@ var paula = {
 //un solo parametro no hace falta los parentesis así que lo vamos a quitar.
 //y luego si solo lo que estamos haciendo en la funcion es un return de algo
 //no hacen falta las llaves
-const esAlta = ({persona}) => altura > 1.8
+const esAlta = ({altura}) => altura > 1.8
+const esBaja = ({altura}) => altura <= 1.6
 
 //si queremos mejorar nuestro arrow un poco mas lo podemos desglosar
 //acedemos a la altura y preguntamos por altura en la condición
+//no nos importan tener una tener la var persona por que solamente
+//nos intereza la altura de persona
 
 // para indicar que esto es un array vamos a indicar con signo corchete
 //aca vamos a ir poniendo cada una de las variables que quiero que tengo
@@ -64,6 +67,12 @@ var personas = [sacha, alan, martin, dario, vicky, paula]
 //ahora bien esta funcion filter lo que lleva como parametro es una condicion
 //
 var personasAltas = personas.filter(esAlta)
+var personasBajas = personas.filter(esBaja)
+//forma no mas proliga como funcion
+// var personasBajas = personas.filter(esBaja = ({altura}) => altura <= 1.79 )
+
+
+
 //otra forma de declarar el filter.dentro del parametro es donde definimos
 //la función muchas veces ultilizamos un funcion anonima dentro del filter
 //donde ponemos la persona acá y el return. Esto funciona igual
@@ -76,4 +85,5 @@ var personasAltas = personas.filter(esAlta)
 //seguimos teniendo el array original no lo perdemos.
 
 console.log(personasAltas)
+console.log(personasBajas)
 
