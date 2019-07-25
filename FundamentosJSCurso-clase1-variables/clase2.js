@@ -7,18 +7,37 @@ var apellidoEnMinusculas = apellido.toLowerCase()
 var primeraLetraDelNombre = nombre.charAt(0)
 var cantidadDeLetrasDelNombre = nombre.length
 
-// var nombreEnMayusculas = nombre.toUpperCase()
-// var apellidoEnMinusculas = apellido.toLowerCase()
 
-// var primeraLetraDelNombre = nombre.charAt(0)
-// var cantidadDeLetrasDelNombre = nombre.length
+var str_b = nombre.substr(1, 4)
+
 var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
-var str = nombre.charAt(1) + nombreCompleto.charAt(2)
+var str = nombre.charAt(0) + ' ' + nombreCompleto.charAt(2)
 console.log(`nombre ` + `${nombre}`)
 var nombre_2 = 'kiot'
 console.log(`y las primeras 2 letras son: ${nombre_2.substr(0,2)}`);
 console.log(ultimaLetra,cantidadDeLetrasDelNombre)
+console.log(nombreCompleto)
+console.log(str_b)
+console.log(str)
 
 
+//Si queremos saber cual es primer carácter de un string y 
+//debemos pasarle por parámetro la posición del primer carácter 
+//de todo string este se encuentra la posición 0, si queremos el ultimo
+//caracter pasamos por parametro la posicion 4.
+// var primeraLetraDelNombre = nombre.charAt(0)
 
-var str = nombre.substr(1, 2)
+//También podemos ver la cantidad de letras de la var nombre así:
+// var cantidadDeLetrasDelNombre = nombre.length
+//No llamamos a los paréntesis simplemente llamamos al atributo length.
+//length ve el recorrido
+
+//Vamos usar otra función que se substr
+//Y le tenemos que decir desde donde queremos que empiece desde la 
+//posición 1 y cuanto caracteres queremos que tome si le paso 1 solo 
+//va tomar la a si le decimos 2 va a tomar la a-c
+//Var srt = nombre.substr(1, 2)
+//primero la posición de donde quiero que comience despues el rango
+//de letra que quiero que tome hasta la posición defined
+
+
