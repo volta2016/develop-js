@@ -15,4 +15,6 @@ imprimirEdad(27, `Kyo`)
 imprimirEdad()
 //nos va arrojar nada definido.
 
+//no podemos tener una var que se llame var function son palabras reservadas del lenguaje.
+
 

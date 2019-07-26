@@ -13,13 +13,16 @@ var nombreMusica = 'JAZZ'
 
 //funcion + parametro n local
 function imprimirMusicaMinuscula(n) {
+	var nombre_x = `dataerror`
 	nombreMusica.toLowerCase()
+	//var local
 	var minus = n.toLowerCase()
 	console.log(`en minuscula ${minus}`)
 	console.log(`impresion de nombre local dentro de la funcion ${n}`)
 	console.log(`impresion de nombre Global dentro de la funcion ${window.n}`)
-	console.log(`Su ultima letra es ${n.charAt(3)}`)
-	console.log(`su primeras 2 letras ${n.substr(0,2)}`)
+	console.log(`Su ultima local letra es ${n.charAt(3)}`)
+	console.log(`su primeras local 2 letras ${n.substr(0,2)}`)
+	console.log(`local ${nombre_x}`)
 	//lo que hace nombreMusica dentro de parametro n de la funcion imprimirMusicaMinuscula
 	//existe en alcance local 
 	//de la funcion sin importar el alcance global.
