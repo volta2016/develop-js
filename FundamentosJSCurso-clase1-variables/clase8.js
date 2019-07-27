@@ -25,10 +25,13 @@ function imprimirNombreEnMayuscula(persona) {
 imprimirNombreEnMayuscula(sasuke)
 imprimirNombreEnMayuscula(itachi)
 //imprime la funcion en consola
-//lo que estamos haciendo es crear un nuevi objeto modificado
+//lo que estamos haciendo es crear un nuevo objeto modificado
+//modifica edad le pasa +1 pero no afecta al sasuke de alcance global
 function cumpleanos(persona){
+	console.log(sasuke)
 	return {
 		...persona,
 		edad: persona.edad + 1
 	}
 }
+cumpleanos(sasuke)
