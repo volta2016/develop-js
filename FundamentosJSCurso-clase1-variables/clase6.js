@@ -13,6 +13,11 @@ var obito = {
 	apellido : 'uchiha',
 	edad : 22
 }
+var kabuto = {
+	nombre : 'kabuto',
+	apellido : 'rin',
+	edad : 24
+}
 
 // function imprimirNombreEnMayuscula(persona) {
 // 	console.log(persona.nombre.toUpperCase())
@@ -40,7 +45,7 @@ function imprimirNombreEnMayuscula(persona){
 // lo mismo que la funcion de arriba pero le saco el parametro del obj persona 
 //y aplico los 3 atributos del objeto
 // resumen de la funcion 
-// function imprimirEnayusculas(persona) {
+// function imprimirEnMayusculas(persona) {
 //    var nombre = persona.nombre.toUpperCase();
 //    console.log('Hola mi nombre es ' + nombre);
 //}

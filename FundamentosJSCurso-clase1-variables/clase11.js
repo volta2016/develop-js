@@ -60,3 +60,5 @@ function imprimirSiEsMayorDeEdad(persona){
 
 imprimirProfesiones(kyo)
 imprimirSiEsMayorDeEdad(kyo)
+imprimirSiEsMayorDeEdad(Fukui)
+
