@@ -30,11 +30,11 @@ imprimirNombreEnMayuscula(itachi)
 //modifica edad le pasa +1 pero no afecta al sasuke de alcance global
 function cumpleanos(persona){
 	console.log(`sasuke mas viejo edad: ${persona.edad}`)
-	// return {
-	// 	...persona,
-	// 	edad: persona.edad + 1
-	// }
-	//new object
-	persona.edad += 1
+	return {
+		...persona,
+		edad: persona.edad + 1
+	}
+	// new object
+	// persona.edad += 1
 }
 cumpleanos(sasuke)
