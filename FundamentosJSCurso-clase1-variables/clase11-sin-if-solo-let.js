@@ -24,27 +24,27 @@ isAdult(gabriel)
 isAdult(daniel
 
 
-otro metodo
+// otro metodo
 
-const MAYORIA_DE_EDAD = 18
+// const MAYORIA_DE_EDAD = 18
 
-functionmayorDeEdad(persona){
-  return persona.edad>= MAYORIA_DE_EDAD
-}
-
-
-function imprimirSiEsMayorDeEdad(persona){
-  if(mayorDeEdad(persona)){
-    return(`${persona.nombre} es mayor de edad, tiene ${persona.edad}`)
-  } else{
-    return(`${persona.nombre} es menor de edad, tiene ${persona.edad}`)
-  }
-}
+// functionmayorDeEdad(persona){
+//   return persona.edad>= MAYORIA_DE_EDAD
+// }
 
 
-console.log(imprimirSiEsMayorDeEdad(Gabriel))
-console.log(imprimirSiEsMayorDeEdad(Astrid))
-console.log(imprimirSiEsMayorDeEdad(Mauiricio))
+// function imprimirSiEsMayorDeEdad(persona){
+//   if(mayorDeEdad(persona)){
+//     return(`${persona.nombre} es mayor de edad, tiene ${persona.edad}`)
+//   } else{
+//     return(`${persona.nombre} es menor de edad, tiene ${persona.edad}`)
+//   }
+// }
+
+
+// console.log(imprimirSiEsMayorDeEdad(Gabriel))
+// console.log(imprimirSiEsMayorDeEdad(Astrid))
+// console.log(imprimirSiEsMayorDeEdad(Mauiricio))
 
 
 

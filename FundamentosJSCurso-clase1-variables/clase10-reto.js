@@ -5,7 +5,7 @@ boton.addEventListener('click', mayorEdad)
 
 function mayorEdad() {
 	if (edad.value >= 18){
-		alert(`${nombre.value} es maryor de edad`)
+		alert(`${nombre.value} es mayor de edad`)
 	} else {
 			alert(`${nombre.value} eres menor de edad`)
 		}

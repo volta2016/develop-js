@@ -60,22 +60,36 @@ function imprimirSiEsMayorDeEdad(persona){
 //     console.log(`${persona.nombre} es menor de edad.`)
 //   }
 // }
-
+//:::funcion anonima:::
 // const esMayorDeEdad = function (persona) {
 // 	return persona.edad >= MAYORIA_DE_EDAD
 // }
+//esto es exactamente igual a lo que teniamos antes para escribir una arrow function podemos
+//seguir ahorrando caracteres
+// const esMayorDeEdad =  (persona) => {
+// 	return persona.edad >= MAYORIA_DE_EDAD
+// }
 // const esMayorDeEdad =  persona => persona.edad >= MAYORIA_DE_EDAD
+//podeos borrar return y las llaves que rodean al cuerpo de la funcion implicitamente
+//van retornar lo que sigue a continuacion de => en este caso se va hacer la comparacion
+//y va a devolverse el valor de esta comparacion. resumimos el codigo que teniamos de 3 lineas
+//algo mas que podemos hacer si solo nos interesa el parametro edad es desestructurar persona.edad
+//tenemos que poner parentesis y las llaves 
+
 const esMayorDeEdad =  ({edad}) => edad >= MAYORIA_DE_EDAD
 //de esta manera lo que hacemos a la funcion esMayorDeEdad le pasamos una funcion 
 //que le vamos a pasar un objeto que tiene una edad ({edad}) y nos va retornar si esa
 //edad es mayor e igual de edad a la const MAYORIA_DE_EDAD = 18 que es una constante que en este 
 //caso va a ser 18
 const esMenorDeEdad = ({edad}) => edad < MAYORIA_DE_EDAD
+
 //lo que estamos haciendo es que a la funcion es esMenorDeEdad le pasamos una funcion
 //que le vamos a pasar el objeto edad, luego => quiere decir que se aplica la función
 //como una arrow function, esto va retornar si es menor  MAYORIA_DE_EDAD
 // otra forma de const en la cual aplico no esMayorDeEdad
+
 // const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
+//const esMenorDeEdad = (persona) => !esMayorDeEdad(persona)
 
 //aquí aplico la funcion al if solo aplicando el nombre de la const
 function permitirAccesoDesafio(persona)  {
@@ -97,13 +111,18 @@ function permitirAccesoDesafio(persona)  {
 imprimirProfesiones(kyo)
 imprimirSiEsMayorDeEdad(kyo)
 imprimirSiEsMayorDeEdad(Fukui)
+permitirAccesoDesafio(Fukui)
+ImprimirSiEsMenorDeEdad(kyo)
 //Mejorar code
-// function ImprimirSiEsMenorDeEdad (persona) {
-// 	if (esMenorDeEdad(persona) >= esMenorDeEdad) {
-// 		console.log(`${persona.nombre} no es menor de edad`)
-// 	} else { 
-// 		console.log(`${persona.nombre} si es menor de edad`)
-// 	}
-// }
+function ImprimirSiEsMenorDeEdad (persona) {
+	if (esMenorDeEdad(persona)) {
+		console.log(`${persona.nombre} si es menor de edad`)
+	} else { 
+		console.log(`${persona.nombre} no es menor de edad`)
+	}
+}
 
-// const esMenorDeEdad = ({edad}) => edad <= MAYORIA_DE_EDAD 
+// //puedo aplicar este if en  ImprimirSiEsMenorDeEdad  
+// if (esMenorDeEdad(persona) < esMayorDeEdad) 
+
+
