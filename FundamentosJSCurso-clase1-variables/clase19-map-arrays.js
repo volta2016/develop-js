@@ -48,11 +48,11 @@ var personas = [sacha, alan, martin, dario, vicky, paula]
 //forma no mas proliga como funcion
 // var personasBajas = personas.filter(esBaja = ({altura}) => altura <= 1.79)
 
-const personaAlturaACms = persona => {
-    //persona.altura = persona.altura * 100
-    persona.altura *= 100
-    return persona
-}
+// const personaAlturaACms = persona => {
+//     //persona.altura = persona.altura * 100
+//     persona.altura *= 100
+//     return persona
+// }
 //map lo que va hacer es ejecutar esta funcion por cada persona y retornar la persona entonces
 // lo que va hacer es generarnos un nuevo array con estas personas con la atura en 100
 //para que return el valor de las personas en 100 debemos envolver en parentesis después de la funcion
