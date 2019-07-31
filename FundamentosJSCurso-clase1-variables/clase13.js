@@ -7,10 +7,11 @@ var kyo = {
 console.log(`Al inicio del año ${kyo.nombre} pesa ${kyo.peso}kg`)
 
 //aumentar de peso va a ser una una función, los parametros van entre parentesis que va 
-//a recibir una persona y un incremento => y lo que va hacer es 
+//a recibir el obj persona y un incremento => y lo que va hacer es 
 //persona punto peso += incremento es decir le va a retornar un valor.
 
 const INCREMENTO_PESO = 0.2
+//cuando dio negativo fue por que estaba en 200kg y tiene que estar en 200gr
 const DIAS_DEL_ANO = 365
 
 // function aumentarDePeso (persona) {
