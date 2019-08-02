@@ -3,10 +3,10 @@
 //::esta funcion es la que se va a ejecutar cuando creemos una nueva persona, es como
 //::en otro lenguaje se conoce como constructor
 //entonces esta funcion de va crear cuado creemos una persona
-function Persona(nombre, apellido) {
+function Persona(nombre, apellido, altura) {
     this.nombre = nombre
     this.apellido = apellido
-    console.log(`me ejecutaron`)
+    this.altura = altura
 }
 //otra cosa que podemos hacer es empezar a pasarle parametros a nuestro prototipo
 //a nuestra funcion persona(nuestro constructor) que estamos usando para construir
@@ -18,7 +18,12 @@ function Persona(nombre, apellido) {
 //this va hacer referencia a ese objeto que se acaba de contruir
 //entonces this.nombre le vamos a asignar nombre
 Persona.prototype.saludar = function () {
-    console.log(`Hola, me llamo ${this.nombre} ${this.apellido} `)
+    if (soyAlto(this)) {
+        console.log(`hola, soy ${this.nombre} ${this.apellido}, soy alto`)
+    } else {
+        console.log(`Hola soy ${this.nombre} ${this.apellido}, no soy alto`)
+    }
+    // console.log(`Hola, me llamo ${this.nombre} ${this.apellido} `)
 }
 
 // Persona.prototype.soyAlto = function () => this.altura > 1.8
@@ -39,9 +44,13 @@ Persona.prototype.saludar = function () {
 
 //up
 
+//arrow function
+var soyAlto = persona => persona.altura >= 1.80
+
 var sacha = new Persona('Sacha', 'lifszyc', 1.72)
 var erika = new Persona('Erika', 'Luna', 1.65)
-var arturo = new Persona('Arturo', 'Martinez', 1.89)
+var arturo = new Persona('Arturo', 'Martinez', 1.90)
+arturo.saludar()
 
 // Persona.prototype.soyAlto = function () {
 //     return this.altura > 1.8
