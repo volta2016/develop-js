@@ -5,6 +5,8 @@
 //entonces esta funcion se va crear cuado creemos una persona
 
 
+//Con esto ya decimos lo que necesitamos hacer para generar la herencia 
+
 function heredaDe(protipoHijo, protipoPadre) {
     var fn = function () {}
     fn.prototype = protipoPadre.prototype
@@ -89,6 +91,7 @@ Persona.prototype.soyAlto = function() {
 //luego de que todo lo que hicimos con el prototipo de persona
 //esta funcion va a ser cuando la funcion que se va ejecutar cuando creemos 
 //nuevos tipos de desarroladores
+
 function Desarrollador (nombre, apellido) {
     this.nombre = nombre
     this.apellido = apellido
@@ -97,6 +100,9 @@ function Desarrollador (nombre, apellido) {
 
 //vamos a pisar la funcion que tenia la persona
 //entonces el saludo de los desarrolladores va a ser distinto 
+
+heredaDe(Desarrollador, Persona)
+
 Desarrollador.prototype.saludar = function () {
     console.log(`hola me llamo ${this.nombre} ${this.apellido} y soy desarrolador/a`)
 }
@@ -105,7 +111,6 @@ Desarrollador.prototype.saludar = function () {
 //vamos a querer llamar esta funcion - primero la clase hiha y luego la clase padre
 //y ahora si vamos a definir la funcion hereda de
 
-heredaDe(Desarrollador, Persona)
 
 var soyAlto = persona => persona.altura >= 1.80
 
