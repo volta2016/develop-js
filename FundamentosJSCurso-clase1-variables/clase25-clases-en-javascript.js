@@ -1,44 +1,4 @@
-//vamos a definir un funcion que va a definir el protipo 
-//para definir un prototipo lo unico que tenemos que definir es una funcion 
-//::esta funcion es la que se va a ejecutar cuando creemos una nueva persona, es como
-//::en otro lenguaje se conoce como constructor
-//entonces esta funcion se va crear cuado creemos una persona
-
-
-//Con esto ya decimos lo que necesitamos hacer para generar la herencia 
-
-//____para hacer herencia tenemos que escribir una funcion propia nuestra.
-//recordemos que los prototitpos siempre son objetos como los objetos que venimos trabajando
-//hasta acá
-
-//::recoredemos que los parametros que estan dentro de heredaDe son funciones, todas 
-//las funciones tienen el atributo prototipe.
-function heredaDe(protipoHijo, protipoPadre) {
-    var fn = function () {}
-    //definimos como funcion vacia var fn = function () {} //se le asigna a una var que llame fn
-    //var con funcion anonima
-
-    //lo que vamos hacer a esta funcion le vamos a asignar a su protitpo"prototype" el prototipo
-    //del prototipo padre 
-
-    //y lo que vamos hacer a esta funcion le vamos a asignar a su protitpo"prototype" el prototipo
-    //del prototipo padre 
-    fn.prototype = protipoPadre.prototype
-    //a continuacion lo que vamos hacer al prototipo hijo, le vamos a decir que su prototype va a ser
-    //un nuevo obj de esta funcion que acabamos de crear acá //nuevo obj = new fn
-    //basicamente estamos haciendo lo mismo pero para no estar pisando el prototipe del
-    //protipoPadre lo pasamos a otro objeto.
-    //::ademas lo que tenemos qu hacer es asignar la funcion constructura
-    //la funcion contructora de la clase hija despues de new fn.
-    //clasehijo.constructor = clasehijo (prototipo en este caso en js no clase)
-    protipoHijo.prototype = new fn
-    protipoHijo.prototype.constructor = protipoHijo //si no agregabamos a esta linea se
-    //va estar llamando al constructor de protipo padre.
-}
-//explicacion de la funcion heredaDe:
-//lo que tenemos que hacer es decirle  al protipo hijo quien va a ser su padre,
-//basicamente lo que tenemos que hacer asignarle un prototipo este protipo "clase"
-//hijo
+//Clases en JavaScript
 
 
 
