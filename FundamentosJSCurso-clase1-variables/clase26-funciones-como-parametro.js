@@ -13,14 +13,19 @@ class Persona {
         var { nombre, apellido} = this 
         // var nombre = this.nombre
         // var apellido = this.apellido
-        console.log(`hola me llamo: ${nombre} ${apellido}`)
+        console.log(`hola, me llamo: ${nombre} ${apellido}`)
         //preguntamos de esta manera si esta funcion tiene un valor es decir si nos pasaron un valor en
         //saludar(fn) este bloque de codigo se va ejecutar es decir esta condicion va ser verdadera,
         //si acá no nos pasaron nada entonces no se va ejecutar y esta condicion va a ser falsa.
         //otros ejemplos (null) va a ser siempre false (0) va a ser siempre false. si tenemos algun valor que 
         //de 0 va a dar siempre false, cualquier cosa ({}) un objeto que este vacio va a ser verdadero, 
-        //un array([]) aunque este vacio va a ser verdadero, un strigs ('')va a ser verdadro (ya un strins)
+        //un array([]) aunque este vacio va a ser verdadero, un strigs ('jkhkj')va a ser verdadro (ya un strins)
         //vacio no. 
+        //*una funcion existe si nos pasan algo va a da verdadero dentro de una condición.
+        //si no estamos pasando nada saludar() y el if va terminando siendo undifined dentro de un 
+        //if es falso. entonces si existe esta funcion la vamos a llamar simplemente poniendo el nombre y los
+        //parentesis como si la estuvieramos llamando.
+        //o simplemente omitimos ese parametro undifined evaluado como una condicion va a dar false
         if (fn) {
             fn(nombre, apellido) //podemos definirlo como false o no definirlo por que no es dev la persona
         }
@@ -53,7 +58,7 @@ class Desarrollador extends Persona {
     }
 
     saludar(fn) {
-        var { nombre, apellido} = this 
+        var { nombre, apellido} = this //definimos this que resume el code de aplicarlo en console.log
         
         console.log(`hola me llamo ${nombre} ${apellido} y soy desarrolador/a`)
         if (fn) {
@@ -72,7 +77,7 @@ class Desarrollador extends Persona {
 function responderSaludo (nombre, apellido, esDev){
     console.log(`Buen día ${nombre} ${apellido}`)
     if (esDev) {
-        console.log(`no sabia que eras desarrollador/a`)
+        console.log(`ah mirá, no sabia que eras desarrollador/a`)
     }
 
 }
