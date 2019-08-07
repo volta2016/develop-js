@@ -8,11 +8,13 @@ const PEOPLE_URL = 'people/:id'
 //para poder hacer un request con jquery tenemos que llamar al metodo $.get
 //este metodo nos prermite hacer un request y acepta varios parametros.
 //1-.el primero de los parametros va hacer la url a la cual queremos acceder en este caso
-//va hacer la url completa en primer lugar queremos obtener a Luke Skywalker y que se encuenra
-//en people 1, tenemos que remplazar el :id por un id valido en caso de luke es el 1
+//va hacer la url completa en primer lugar queremos obtener a Luke Skywalker y que se encuentra
+//en people 1, //**entonces vamos a llamar al metodo que tienen todo los string. que .replace
+//y le tenemos que decir que strings queremos que cambie en este caso :id y por que strings
+//queremos que cambie a 1
+//tenemos que remplazar el :id por un id valido en caso de luke es el 1
 //js lo reconoce como numero pero lo pasa a string
-//**entonces vamos a llamar al metodo que tienen todo los string. 
-//esto todo lo que esta aca es parametro de la funcion peso get de jquery
+//$.get(`${$API_URL}${PEOPLE_URL.replace(':id', 1)}`)
 //2-. el segundo parametro es indicarle a jquery que este request se va hacer hacia
 //otra pagina no es la pagina actual no es el archivo que tenemos aca, etonces eso lo 
 //hacemos con una "," y poniendo un objeto podemos poner varias opciones que queremos
@@ -28,9 +30,12 @@ const PEOPLE_URL = 'people/:id'
 //en principio.
 //vamos a cortar la funcion que invocamos en el get y vamos aplicarle en el onResponse
 const lukeUrl =`${API_URL}${PEOPLE_URL.replace(':id',1)}`
-const opts = {crossDomain: true}//idicamos a jquery que este request se va hacer hacia otra pag
+const opts = {crossDomain: true}//idicamos a jquery que este request se va hacer hacia otra pag 
+//const opts = a este objeto
 const onPeopleResponse = function (persona) {
     console.log(`hola yo soy ${persona.name}`)
 }
 
-$.get(lukeUrl, opts, onPeopleResponse)
+$.get(lukeUrl, opts, onPeopleResponse)//por ultimo vamos estar poniendo nuestro famoso callback
+//$get va a ser encargado de llamarla, cuando en un futuro cuando termine el request se va a llamar
+
