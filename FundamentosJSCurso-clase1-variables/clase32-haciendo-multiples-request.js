@@ -51,4 +51,37 @@ obtenerPersonaje(3)
 //hacer un for y obtener los primeros 100 personajes pero no los garantiza nada que el 
 //orden que los pedimos sea el orden en el que llega 
 
+// //_________pidiendo ingresar al usuario 
+// const URL_BASE = "https://swapi.co/api/";
+// const PEOPLE_SEARCH_URL = "people/?search="
+// const OPTS = {crossDomain: true};
 
+// const onSearchedPeopleResponse = (person) => (console.log(`El primer personaje encontrado fue: ${person.results[0].name}.`));
+
+// function buscarPersonaje(personaje){
+//     const URL = `${URL_BASE}${PEOPLE_SEARCH_URL}${personaje}`
+//     $.get(URL,OPTS,onSearchedPeopleResponse);
+// }
+
+// var personajeBuscado = prompt(`Ingrese el personaje que desea buscar:\n("" para salir)`);
+// buscarPersonaje(personajeBuscado);
+
+
+//_____________pidiendo planete
+// const API_URL ='https://swapi.co/api/'
+// const PLANETA_URL = 'planets/:id'
+// const OPTS = {crossDomain: true }
+
+// const onresponse = function(planeta) {
+//   console.log(`Hola, yo soy ${planeta.name}`)
+// }
+// function obtenerPLANETA(id) {
+//   consturl = `${API_URL}${PLANETA_URL.replace(':id', id)}`
+//   $.get(url, OPTS, onresponse)
+// }
+
+// obtenerPLANETA(1)
+// obtenerPLANETA(2)
+// obtenerPLANETA(3)
+// obtenerPLANETA(4)
+// obtenerPLANETA(5)
