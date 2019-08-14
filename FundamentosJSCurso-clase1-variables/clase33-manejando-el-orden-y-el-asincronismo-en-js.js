@@ -32,17 +32,31 @@ const PEOPLE_URL = 'people/:id'
 //vamos a cortar la funcion que invocamos en el get y vamos aplicarle en el onResponse
 
 const opts = {crossDomain: true}//idicamos a jquery que este request se va hacer hacia otra pag
-const onPeopleResponse = function (persona) {
-    console.log(`hola, yo soy ${persona.name}`)
-}
 
-function obtenerPersonaje (id) {
+//callback a esta funcion también la podemos llamar cv o fn
+function obtenerPersonaje (id, callback) {
     const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}` //entonces vamos a llamar al metodo que tienen todo los string. que .replace
-    $.get(url, opts, onPeopleResponse)
+//ahora el $.get termina ejecutando esta funcion que esta definida por parametros.    
+    $.get(url, opts, function (persona) {
+        console.log(`hola, yo soy ${persona.name}`)
+        if (callback) {
+            callback()
+        }
+})
 }
-obtenerPersonaje(1)
-obtenerPersonaje(2)
-obtenerPersonaje(3)
+obtenerPersonaje(1, function() {
+    obtenerPersonaje(2, function() {
+        obtenerPersonaje(3, function(){
+            obtenerPersonaje(4, function() {
+                obtenerPersonaje(5, function(){
+                    obtenerPersonaje(6, function() {
+                        obtenerPersonaje(7)
+                    })
+                })
+            })
+        })
+    })
+})
 //esto es e asincrinismo de js en su maximo explendor entender que vamos a llamar a un metodo asincronico 
 //en este caso multiple metodos asincornicos que no sabemos en que orden no van a llegar
 //las respuestas eso simplemente depende del servidor y de cuanto tarda en responder cada
@@ -89,20 +103,20 @@ obtenerPersonaje(3)
 
 //_________Impresión de los 25 primeros personajes:
 
-const API_URL = 'https://swapi.co/api/'
-const PEOPLE_URL ='people/:id'
+// const API_URL = 'https://swapi.co/api/'
+// const PEOPLE_URL ='people/:id'
 
-const options = {crossDomain: true}
-const onePeopleResponse = function(people){
-  console.log(`Hola, yo soy ${people.name}`)
-}
+// const options = {crossDomain: true}
+// const onePeopleResponse = function(people){
+//   console.log(`Hola, yo soy ${people.name}`)
+// }
 
-function obtenerPersonaje(id){
-  consturl = `${API_URL}${PEOPLE_URL.replace(':id', id)} `
-  $.get(url, options, onePeopleResponse)
-}
-var contador = 0
-for(var i = 0; i < 25; i++){
-  contador++ //con esto le va sumando uno en teoria 
-  obtenerPersonaje(contador)
-}
+// function obtenerPersonaje(id){
+//   consturl = `${API_URL}${PEOPLE_URL.replace(':id', id)} `
+//   $.get(url, options, onePeopleResponse)
+// }
+// var contador = 0
+// for(var i = 0; i < 25; i++){
+//   contador++ //con esto le va sumando uno en teoria 
+//   obtenerPersonaje(contador)
+// }

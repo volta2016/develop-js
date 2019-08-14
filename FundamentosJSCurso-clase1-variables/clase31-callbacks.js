@@ -22,11 +22,11 @@ const PEOPLE_URL = 'people/:id'
 //Ahora al ultimo vamos estas poniendo nuestro famoso callback.
 //que es un callback es una funcion que se va ejecutar en algún futuro que no sabemos
 //cuando se va ejecutar pero que este peso $.get va ser el encargado de llamarla.
-//cuando en un futuro cuando termine el request se v a lamar tambien puede ser que ese 
+//cuando en un futuro cuando termine el request se va a llamar tambien puede ser que ese 
 //request nunca se complete la funcion nunca se llame (pero lo qu tenemos que enteder 
 //es que esta funcion puedo o no llamarse en algún futuro con los datos que nos mande
 //el request de respuesta), entonces lo que hacemos es poner una funcion directamente acá 
-//anonima y vamos a ver que parametros nos llega no sabemos cuanto paramtos nos llegue
+//anonima y vamos a ver que parametros nos llega no sabemos cuanto parametos nos llegue
 //en principio.
 //vamos a cortar la funcion que invocamos en el get y vamos aplicarle en el onResponse
 const lukeUrl =`${API_URL}${PEOPLE_URL.replace(':id',1)}`
