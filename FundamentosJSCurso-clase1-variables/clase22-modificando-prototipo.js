@@ -60,19 +60,25 @@ Persona.prototype.saludar = function() {
 // }
 // this === window //esto es true en consola
 
+// aca recien es donde voy estar modificado al prototipo para invocar a prototipe y los objetos debo
+//llamar a la Persona.prototipe.soyalto = fuction() {} es Persona + el prototype + nombre de la funcion
+//es igual a la funcion que estoy invocando es importante colocar todas las funciones juntas en orden
+//para que nos los de error
 Persona.prototype.soyAlto = function() {
   return this.altura > 1.8
 }
 //esta condicion nunca se va dar por que es objeto window
 
+//this en el espacio global es window
+//this === window es true
 
 var soyAlto = persona => persona.altura >= 1.80
 
 var sacha = new Persona('Sacha', 'lifszyc', 1.72)
 var erika = new Persona('Erika', 'Luna', 1.65)
 var arturo = new Persona('Arturo', 'Martinez', 1.90)
-arturo.soyAlto()
 arturo.saludar()
+arturo.soyAlto()
 
 //__orden:
 //function 

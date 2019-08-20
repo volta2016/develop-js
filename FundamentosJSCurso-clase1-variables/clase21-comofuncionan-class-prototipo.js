@@ -2,7 +2,7 @@
 //para definir un prototipo lo unico que tenemos que definir es una funcion 
 //::esta funcion es la que se va a ejecutar cuando creemos una nueva persona, es como
 //::en otro lenguaje se conoce como constructor
-//entonces esta funcion de va crear cuado creemos una persona
+//entonces esta funcion de va crear cuando creemos una persona
 function Persona(nombre, apellido, altura) {
     this.nombre = nombre
     this.apellido = apellido
@@ -15,7 +15,7 @@ function Persona(nombre, apellido, altura) {
 
 //y para guardarlo dentro de este objeto que se esta construyendo en la memoria
 //podemos hacer referencia a ese objeto dentro de esta funcion como como this
-//this va hacer referencia a ese objeto que se acaba de contruir
+//this va hacer referencia a ese objeto que se acaba de construir
 //entonces this.nombre le vamos a asignar nombre
 Persona.prototype.saludar = function () {
     if (soyAlto(this)) {

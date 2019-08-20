@@ -72,9 +72,10 @@ class Desarrollador extends Persona {
 
 // var soyAlto = persona => persona.altura >= 1.80
 
-// var sacha = new Persona('Sacha', 'lifszyc', 1.72)
+var sacha = new Persona('Sacha', 'lifszyc', 1.72)
 // var erika = new Persona('Erika', 'Luna', 1.65)
 // var arturo = new Persona('Arturo', 'Martinez', 1.90)
+var arturo = new Desarrollador('Arturo', 'Martinez', 1.90)
 // arturo.soyAlto()
 // arturo.saludar()
 

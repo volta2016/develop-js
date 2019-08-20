@@ -10,7 +10,7 @@ function obtenerPersonaje (id) {
    return new Promise((resolve,reject) => {
      const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`     
      $
-     .get(url, opts, function (data) {
+     .get(url, opts, function(data) {
         resolve(data)
      })
      .fail(() => reject(id))  
@@ -30,7 +30,7 @@ function onError(id) {
 //     return obtenerPersonaje(id)
 // })
 
-//vanos a ver otra forma de escribir esto: con arrow function
+//vamos a ver otra forma de escribir esto: con arrow function
 var ids = [1, 2, 3, 4, 5, 6, 7]
 var promesas = ids.map( id => obtenerPersonaje(id))
 
@@ -40,6 +40,7 @@ Promise
  .all(promesas)
  .then(personajes => console.log(personajes))
  .catch(onError)
+
 
 //:::::::::ejemplo con planetas id
 
