@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>var, let y const: las diferencias entre ellos</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		function diasEntreFechas(fecha1, fecha2) {
+			const unDia = 1000 * 60 * 60 * 24//1000ms son 1seg * 60 son un minuto * 60 es una hora * 24 son 24 horas
+			const diferencia = Math.abs(fecha1 - fecha2)
+			return Math.floor(diferencia / unDia) 
+		}
+		const hoy = new Date()
+		const nacimiento = new Date(1990, 6, 8)
+	
+
+	</script>
+
+
+
+</body>
+</html>

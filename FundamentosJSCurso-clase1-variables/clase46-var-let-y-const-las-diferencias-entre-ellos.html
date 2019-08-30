@@ -2,13 +2,74 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>async await</title>
+	<title>var, let y const: las diferencias entre ellos</title>
 </head>
 <body>
 
 
 
-<script type="text/javascript"></script>
+	<script type="text/javascript">
+		var kyo = {
+			nombre : 'Kyo',
+			apellido: 'Ito',
+			edad: 28
+
+		}
+
+		// function esMayorDeEdad(persona) {
+		// 	var mensaje, mensaje2
+		// 	if (persona.edad > 18) {
+		// 		mensaje = 'Es mayor de Edad'
+
+		// 	} else { 
+		// 		mansaje = 'Es menor de edad'
+		// 		mensaje2 = 'Este es otro mensaje'
+		// 	}
+		// 	console.log(mensaje)
+		// }
+		
+
+		//:::::con let
+		// function esMayorDeEdad(persona) {
+		// // en estos casos deberíamos declarar la variable mensaje acá arriba con let y luego simplemente hacer la asignación 
+		// // importante::::::::::::
+		// // let reduce su alcance solamente al bloque de codigo donde es utilizado
+		// 	let mensaje
+		// 	if (persona.edad > 18) {
+		// 		// let mensaje
+		// 		mensaje = 'Es mayor de Edad'
+
+		// 	} else { 
+		// 		mansaje = 'Es menor de edad'
+		// 	}
+		// 	console.log(mensaje)
+		// }
+		
+
+		//:::::con const
+		function esMayorDeEdad(persona) {
+			let mensaje
+			const MAYORIA_DE_EDAD = 18
+			if (persona.edad > MAYORIA_DE_EDAD) {
+				// let mensaje
+				mensaje = 'Es mayor de Edad'
+
+			} else { 
+				mansaje = 'Es menor de edad'
+			}
+			console.log(mensaje)
+		}
+		for (var i = 0; i < 10; i++) {
+			console.log(i)
+
+		}
+		//como vimos anteriormente let reduce el alcande de la var entonces solo se podra itulizar dentro del for
+		console.log(`Termino el for, el valor de i es ${i}`)
+
+		// esMayorDeEdad(kyo)
+	
+
+	</script>
 
 
 
