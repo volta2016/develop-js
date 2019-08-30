@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memoización: ahorrando cómputo</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		/*
+		factorial de numeros podríamos 
+		!6= 6 * 5 * 4 * 3 * 2 * 1 = 720 //podrímos decir que nuestro caso base es el 1 por que aqui es donde termina la recursividad
+		!12 = 12 * 11 * 10 * 9 * 8 * 7 !6	
+		
+		siempre va a ser hasta llegar hasta el 1 y desde el numero que comienza	 
+		*/
+		function factorial(n){
+			//podemos preguntar si la cache esta funcion esta definida o no
+			//si no esta definida creemos un objeto nuevo vacio 
+			//:: esto se va ejecutar la primera vez que se llame a la funcion 
+			if (!this.cache){
+				this.cache = {}
+			}
+			debugger
+			if (this.cache[n]) {
+				return this.cache[n]
+			}
+			if (n === 1) {
+				return 1
+			}
+			//ahora si no es 1 vamos a retornar
+			this.cache[n] = n * factorial(n - 1)
+			debugger 
+			return this.cache[n]//
+			//esto quedaria expresado
+			//6 * 5 * 4 * 3 * 2 * 1 factorial(1)//va cambiando el n
+			//factorial(1) ahi vamos a llegar al casos base. que va a ser el del primer if y el return de abajo se va a remplazar por 1 y listo 
+
+		}
+
+	</script>
+
+
+
+</body>
+</html>

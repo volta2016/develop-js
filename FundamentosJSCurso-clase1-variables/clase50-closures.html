@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Entiende los closures de JavaScript</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		function crearSaludo(finalDeFrase) {
+			return function(nombre) {
+				//function anonima
+				console.log(`hola ${nombre} ${finalDeFrase}`)
+
+			}
+
+		}
+		const saludoArgentino = crearSaludo('che')
+		const saludoMexicano = crearSaludo('güey')
+		const saludoColombiano = crearSaludo('amigo')
+		
+		saludoArgentino('Sacha') //Hola Sacha che
+		saludoMexicano('Sacha') //Hola Sacha güey
+		saludoColombiano('Sacha') //Hola Sacha amigo
+
+	</script>
+
+
+
+</body>
+</html>

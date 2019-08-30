@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>recursividad</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		/*13 / _14___
+		13 - 4 = 9	1
+		9 - 4 = 5	1
+		5 - 4 = 1 	1
+		1 - 4 = -3 	0 //acá podemos observar que el dividendo es menor estricto que el divisor
+		estamos sumando un 0 se terminna nestro algoritmo 
+		//este el ultimo es nuestro caso base.
+		la division entera de 13 sobre 4 es 3
+		para poder segur haciendo es que el dividendo sea mayor o igual
+		que el divisor por ejemplo 4 / 4 = 0 pero si se puede hacer */
+		function divisionEntera(dividendo, divisor) {
+			if (dividendo < divisor) {
+				return 0
+			}
+			return 1 + divisionEntera(dividendo - divisor, divisor)
+		}
+		console.log(divisionEntera(13, 3))
+		console.log(return)
+		console.log(30, 3)
+
+
+	</script>
+
+
+
+</body>
+</html>

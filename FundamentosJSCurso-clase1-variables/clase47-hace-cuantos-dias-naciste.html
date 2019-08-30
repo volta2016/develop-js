@@ -12,12 +12,31 @@
 		function diasEntreFechas(fecha1, fecha2) {
 			const unDia = 1000 * 60 * 60 * 24//1000ms son 1seg * 60 son un minuto * 60 es una hora * 24 son 24 horas
 			const diferencia = Math.abs(fecha1 - fecha2)
-			return Math.floor(diferencia / unDia) 
+			return Math.floor(diferencia / unDia)//Math.floor para redondear para abajo 
 		}
 		const hoy = new Date()
-		const nacimiento = new Date(1990, 6, 8)
+		const nacimiento = new Date(1990, 5, 8)
 	
+		//Le agregue para ver el residuo
 
+		function divisionEntera(dividendo, divisor) {
+			if (dividendo < divisor) {
+				const residuo = divisor + (dividendo - divisor)
+				console.log(`El residuo es ${residuo}`)
+				return 0
+			}
+			return 1 + divisionEntera(dividendo - divisor, divisor)
+		}
+
+		//lo mismo pero utilizando %
+		/*function divisionEntera(dividendo, divisor) {
+		  if(dividendo < divisor) {
+		    const residuo = dividendo % divisor;
+		    console.log(`Residuo: ${residuo}`);
+		    return 0
+		  }
+		  return 1 + divisionEntera(dividendo - divisor, divisor);
+		}*/
 	</script>
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>var, let y const: las diferencias entre ellos</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		function recursividad(divisor,dividiendo){
+			  let contador = 1;
+			  let state = true;
+			  let start = true;
+			  let residuo=0;
+
+			  while(state) {
+			    if(start){
+			      residuo = parseInt(divisor-dividiendo);
+			    } else {
+			        residuo = parseInt(residuo-dividiendo);
+			    }
+
+			   state = checkResiduo(residuo,dividiendo)
+
+			    if(state){
+			      start=false
+			      contador++;
+			    }
+			  
+			  }
+			  return contador;
+	    }
+
+	      function checkResiduo(residuo,dividiendo){
+	        return residuo-dividiendo >=0
+	      }
+	      console.log(recursividad(400, 12))
+	      console.log(checkResiduo(0, 12))
+	</script>
+</body>
+</html>
