@@ -9,22 +9,78 @@
 
 
 	<script type="text/javascript">
-		function crearSaludo(finalDeFrase) {
-			return function(nombre) {
-				//function anonima
-				console.log(`hola ${nombre} ${finalDeFrase}`)
+		// function crearSaludo(finalDeFrase) {
+		// 	return function(nombre) {
+		// 		//function anonima
+		// 		console.log(`hola ${nombre} ${finalDeFrase}`)
+		// 		//finalDeFrase y nombre --> son las variables que pueden utilizarse en la función closure 
+		// 	}
 
-			}
+		// }
+		// const saludoArgentino = crearSaludo('che')
+		// const saludoMexicano = crearSaludo('güey')
+		// const saludoColombiano = crearSaludo('amigo')
+		
+		// saludoArgentino('Sacha') //Hola Sacha che
+		// saludoMexicano('Sacha') //Hola Sacha güey
+		// saludoColombiano('Sacha') //Hola Sacha amigo
+
+		// :::cambiando nombre
+		// function saludopersonal(pais) {
+	 //        return function(nombre) {
+	 //          console.log(`Hola, mi nombre es ${nombre} y soy de ${pais}`)
+	 //        }
+	 //      }
+	 //      const saludo1 = saludopersonal('Peru')
+	 //      const saludo2 = saludopersonal('Colombia')
+	 //      const saludo3 = saludopersonal('Brasil')
+
+	 //      saludo1('Dihan')
+	 //      saludo2('Andres')
+	 //      saludo3('Nuno')
+	 // :::::ejemplo con ambito de var
+	 // 	function inicia() {
+		//   var nombre = "Mozilla"; // 'nombre' es una variable local creada por la función 'inicia'
+		//   var apellido = "firefox";
+		//   function muestraNombre() { // 'muestraNombre' es una función interna (un closure)
+		//     alert(nombre + ' ' + apellido); // dentro de esta función usamos una variable declarada en la función padre
+		//     console.log(apellido);
+		//   }
+		//   muestraNombre();
+		// }
+		// inicia(); 
+
+		// function creaFunc() {
+  // 			var nombre = "Mozilla";
+  // 			function muestraNombre() {
+  //   			alert(nombre);
+  // 			}
+  // 			return muestraNombre;
+		// }
+
+		// var miFunc = creaFunc();
+		// miFunc();
+
+		// :::return
+		// function saludar(nombre) {
+		// 	esta funcion es una expresion que devolvera un valor, que valor el que 
+		// 	"retorna" por que hay que retornarlo si no se retorna si hace cualquier
+		// 	tipo de operacion matematica de concatenación consultar una base de datos
+		// 	cualquier operacion que manipule el entorno pero no retornamos un valor
+		// 	no se puede utilizar esta forma por que si no el resultado de esto sera nada
+		// 	sera undefined no retorna nada
+		// 	return 'hola, me llamo ' + nombre
+		// }
+		// console.log(saludar('kyo'))
+		/*siempre retornar valores de las funciones si "no", no funciona el console.log() console.log el que, con lo que retorno invoco la funcion con saludar y esto devolvera hola me llamo juan */
+		function sumarCuadrados(a, b) {
+			// var cuadradoA = a*a
+			// var cuadradoB = b*b
+			// var sumarCuadrados = cuadradoA + cuadradoB
+			return a*a + b*b //refactorizar ahorrado el 75% del codigo
 
 		}
-		const saludoArgentino = crearSaludo('che')
-		const saludoMexicano = crearSaludo('güey')
-		const saludoColombiano = crearSaludo('amigo')
-		
-		saludoArgentino('Sacha') //Hola Sacha che
-		saludoMexicano('Sacha') //Hola Sacha güey
-		saludoColombiano('Sacha') //Hola Sacha amigo
-
+		alert(sumarCuadrados(50, 23))
 	</script>
 
 
