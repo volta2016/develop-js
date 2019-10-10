@@ -22,6 +22,15 @@ console.log(str_b)
 console.log(str) //consulto srt con la aplicacion de la var nombre
 console.log(ultimaLetra)
 console.log(ultimaLetra)
+// \n nueva linea linea 
+// \n nueva linea 
+// \n nueva linea
+// \f un tabulador 
+// \f un tabulador 
+// \t tabulacion
+//\b espacio atras
+//\b espacio atras 
+
 
 
 //Si queremos saber cual es primer carácter de un string y 
