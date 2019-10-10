@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this en javascript</title>
+</head>
+<body>
+<p>this es el objeto contexto de javascript en cual se esta ejecutando el código</p>
+<h1 id="container" class="container"></h1>
+
+
+<script type="text/javascript">
+    const $container = document.querySelector('#container')
+    // function renderName(name) {
+    //     console.log(this)
+    //     $container.textContent = 'Pokemon encontrado ${name}'
+    // }
+    // console.log(this)
+    // function renderType(type) {
+    //     $container.textContent = 'es de tipo ${type}'
+
+    // }
+    // renderName('Pikachu')
+    // renderType('Electric')
+    //this = dice que es window que es mi objeto global, el objeto contexto de js ¿quien es en este momento this ?
+    //window es donde vive todo el js del navegador
+    //por ejemplo cuando nosotros hacemos un selector con document.querySelector es = window.document.querySelector
+    // por que document vive dentro de window
+    //sigue siendo js pero gracias a this es que window existe
+    //this dentro de node
+    //this en el browser
+
+    //::this es el objeto con contexto::
+
+    // const pokemon = {
+    //     $container: document.querySelector('#container'),
+    //     renderName: function renderName(name) {
+    //         this.$container.textContent = `Pokemon encontrado ${name}`
+    //     },
+    //     renderType: function renderType(type) {
+    //         this.$container.textContent = `es de tipo ${type}`
+    //     }
+    //  }
+    //  pokemon.renderName('Bulbasaour')
+     ///::nota de $container: esta tomando container pero de que contexto
+     //no esta tomando el contexto del objeto actual si no esta tomando el el contexto superior
+     //por que he encapsulado toda mi lógica de programación de pokemon 
+     //container no existe en un contexto superior no mas globales 
+     //si yo tuviera persona.rendername por su puesto que puedo volver a utilizarla. pero como estamos encapsulando
+     //eso nos metimos en un "problema" tenemos que empezar a entender de como es que funciona this.
+     //entonces este $container como lo obtengo 
+
+     //resumen: de lo avanzado ok como yo llamo a pokemon.renderName('Balbasaur') o sea a pokemon que eso es un obejto
+     //a su metodo renderName cual es el objeto contexto "actual= es pokemon" si esto vale this, entonces
+     //.container es esto = $container:
+     //si yo utilizara directamente pokemon en ves de this sigue funcionado. pero la idea es que esto sea un poco mas 
+     //extendible y que no siempre apuntemos a nuestro a mismo elemento asi que vamos a utilizar this.
+     
+    //  const renderName = pokemon.renderName
+    //  const x = renderName.bind(pokemon)
+    //  x('Juan Valdez')
+     //guardo voy a mi navegador  text content vuelve a ser indefinido
+     //entonces mi contexto ya no es mas este objeto(pokemon). mi contexto vuelve a a ser a el global vuelve a ser window
+     //y en window no esta container y es por eso que asi no funciona , .bind .call .apply Primero son métodos que están en cualquier funcion
+     //.bind por bind es es una funcion que va hacer .bind yo le puedo pasar de manera explicita. 
+     //el contexto de que yo quiero que tenga, entonces yo quiero que el contexto de render name sea mi pokemon le puedo
+     //poner acá. :::dato importante::: de .bind  si vien yo le estoy asignando this a renderName por parte del pokemon
+     //esto me crea una nueva funcion.
+     //entonces yo puedo tener una constante x, esto depende el contexto no lo ocupamos todos los días 
+     //mientra le paso mi tercer parametro tendria que ser.
+    //  const renderName = pokemon.renderName
+    //  const x = renderName.call(pokemon, 'Ash','Bruk')
+     //  ::vamos a ver el segundo metodo 
+     //recibe como primer parametro el this que es pokemon y luego mis parametros de mi funcion 
+     //:::y el otro que es igualito es apply lo s parametros que estan se van a recibir de manera de array
+     //y si mi funcion recibe un segundo parametro lo colocaria aquí en el array
+    //  const renderName = pokemon.renderName
+    //  const x = renderName.call(pokemon, ['Mew', 'Gengar'])
+
+     //::como utilizamos this en nuestro día a día en el trabajo, voy utilizar la misma logica que tiene mi funcion.
+     //uan clase es un objeto especial entonces yo voy asignar container.
+     //otra cosa las clases no necesitan las cosmas para separar como los objetos
+     //y primero render name puede ser primeramente una funcion
+     //de primero quedo un poco mas limpio.
+     //bueno ahora la parte interesante para para poder utilizar los metodos.
+     //que yo tengo aqui dentro de ellos es crearme una instancia de esta clase. y esto es parte de programación
+     //orientada a objetos yo tengo un modelo grande que es la clase pokemon y yo la puedo volver un pokemon 
+     //especial 
+    //  pokemon.renderName('Bulbasaour')
+
+
+    //:::qui es donde vamos a comenzar a componer class(que me va a trear los datos de un pokemon)
+   
+
+    class API {
+        BASE_URL = 'http://pokeapi.co/api/v2/'
+        async fetch(id) {
+            const searchId = id || this.id 
+            const response = await fetch(`${this.BASE_URL}pokemon/${searchId}`)
+            const pokemon = await response.json()
+            this.pokemon = pokemon //para asignar a los datos del pokemon.
+            return pokemon 
+        }
+    }
+ 
+     //::utilicemos nuestra segunda clase
+     const api = new API //va a ser una nueva de mi API
+     api.fetch(25) //que seria pikachu
+     .then((data) => {
+        $container.textContent = data.name
+     })
+     //y esto como es una funcion asincrona me va retornar una "promesa"
+
+
+
+     class Pokemon extends API {
+         constructor(id) {
+             super(id)
+             this.id = id 
+         }
+        $container = document.querySelector('#container')
+        renderName() {
+            // this.$container.textContent = `Pokemon encontrado ${name}`
+            this.$container.textContent = `Pokemon encontrado ${this.pokemon.name}`
+        }
+        renderType(type) {
+            this.$container.textContent = `es de tipo ${type}`
+        }
+     }
+     //pokemon especial 
+     // = aca es donde instanciamos la clase del nuevo objeto o pokemon especial
+    //  const pikachu = new Pokemon
+    //  pikachu.renderName('Pikachu')
+     //ahora nos vamos a adueñar de this para cosas mucho mas sofisticadas sacarle el provecho.
+     //por que le estamos pasando las cosas de manera explicita que pasa si le paso parametros pero no se
+     //cual es, para esto voy a crear una segunda clase que me va ayudar a trear los datos de un pokemon
+
+     const pokemon = new Pokemon(25)
+     pokemon.fetch()
+     .then((p) => {
+        pokemon.renderName(p.name)
+     })
+    //::pero yo no quiero hacer esto si bien quiero tener cosas que se compongan quiero tener mi api en un lado
+    //y a mi pokemon en otro lado quiero que pokemon tenga los poderes de la api en si misma, para no tener que intanciar 
+    // 2 cosas aparte. entonces voy a comentar a este lado y como hago eso como en react que es extender 
+    //una clase dentro de otra AL MOMENNTO de extender una clase dentro de otra de manera obligatoria.
+    //tengo que llamar al metodo constructor.
+    // que es un metodo que se llama siempre cuando hacemos una intacia de una clase, asi que vamos hacer 
+    //un constructor la cual va a recibir los parametros que reciba el iniciador de esa clase, todavia 
+    //no hemos enviado ninguno.
+    //y luego ya que estoy extendiendo una API tengo que llamar a su metodo super() para mandarle los parametros
+    //que todavia no enviado a pokemon para que se vayan a la parte superior y sean parte de la API y compartan.
+    //el mismo this a partir de este momento.
+    //::el mismo this dentro de la instancia 
+    //este parametro const pokemon = new Pokemon(25) es el que va llegar a la id del constructor
+    //y ese es parametro que le voy a enviar por super a mi clase superior para que el sepa que datos 
+    //vinieron desde acá
+    //adicionalmente a eso dentro de mi contexto super(id) voy a poner a this.id = id  por que ahora
+    //me voy referir a id dentro de esta parte como this.id ahora eso que quiere decir que tal si cuando 
+    //estoy llamando a mi pokemon  llamo a fetch.
+    //acá hasta el momento anterior yo le tengo que pasar un id a fetch si yo lo quiero utilizar como un metodo.
+    // como la API SOLA pero si yo quiero inicializar mi pokemon directamente con 25, que ta si hacemos algo.
+    //de que yo quiesiera usar el pokemon mande mi dato de que pokemon quiero desde el inicio y si yo quiero utlizar mi api 
+    //mando desde el inicion ese parametro que funciona de ambas manera que funcione el metodo fetch con de manera
+    //explicita o que funcione que yo inicialice mi pokemon y mande su id entonces aca en fetch, yo no tengo 
+    //que enviar una id. "y que tal si ahora mienrtas se resuelve el fetch del pokemon yo lo renderizo y llamo a pokemon
+    //rendername", pero renderName hasta el momomento me recibe el nombre del pokemon, como fetch me devuelve los datos del 
+    //pokemon yo podria en este momento recibir a mi pokemon y mandarle aqui pokemon.name y esto funcionoraria.
+    
+    //pero recuerden que uno de los beneficios number 1 es que yo ya no quieri mandar este parameto de manera
+    //explicita quiero utliliza this. entonces nada mas voy enviar esto .
+    //a partir de ahora this.pokemon esta dentro de this 
+
+</script>
+</body>
+</html>

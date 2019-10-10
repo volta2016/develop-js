@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructuras de datos inmutables</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+	const kyo = {
+		nombre: 'Kyo',
+		apellido: 'uzumaki',
+
+	}
+	const rey = {
+		nombre: 'Rey',
+		apellido: 'uzumaki',
+
+	}
+	// function saludar(){
+	// 	console.log(`Hola mi nombre es ${this.nombre}`)
+	// }
+	function saludar(saludo = 'hola'){
+		console.log(`${saludo}, mi nombre es ${this.nombre}`)
+	}
+	// const saludarAKyo = saludar.bind(kyo)
+	// const saludarARey = saludar.bind(rey)
+	// //esto es por que tenemos 2 function distintas en cual c/u tiene  el this atado a 2 objetos
+	// //distintos
+
+	// setTimeout(saludar.bind(kyo, 'hola che'), 1000) //bind nos devuelve una referencia a la funcion 
+	//recordemos que el setTimeout recibe una funcion y un Timeout un delay 
+	//y nosotros queremos ejecutar la funcion saludar a sacha 
+
+	//.call y .apply:::
+	saludar.call(kyo, 'hola che') 
+	// saludar.apply(kyo, ['hola che ' + 17]) 
+	// saludar.bind(kyo) no hace nada
+	</script>
+
+
+
+</body>
+</html>

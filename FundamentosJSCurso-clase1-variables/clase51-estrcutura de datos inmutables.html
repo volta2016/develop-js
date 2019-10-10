@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estructuras de datos inmutables</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		const kyo = {
+			nombre : 'kyo',
+			apellido : 'uzimaki',
+			edad : 28
+		}
+		// const cumpleanos = persona => persona.edad++
+		const cumpleanosInmutable = persona => ({
+			...persona,
+			edad: persona.edad + 1
+		})
+
+
+		// esto es clave
+
+		// Algo curioso que sucede con la función dependiendo de como se incrementa el valor:
+
+		// En este caso no se modifica el valor que se le pasa como valor:
+
+		// const cumpleInmutable = persona => ({
+		// ...persona,
+		// edad: persona.edad + 1
+		// })
+		// Pero en este si se modifica. ¿Alguien más hizo la prueba?:
+
+		// const cumpleInmutable = persona => ({
+		// ...persona,
+		// edad: persona.edad++
+		// })
+		// Primero debes entender que el operador ++ es como si dijeras persona.edad = persona.edad + 1, asigna el valor a la variable luego de sumarle 1.
+
+		// Por esto se modifica persona.edad en el segundo caso y no en el primero, porque en el primero solo sumas el valor para asignarlo a otra variable no a si misma.
+	</script>
+
+
+
+</body>
+</html>

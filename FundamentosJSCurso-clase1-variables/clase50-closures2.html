@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Entiende los closures de JavaScript</title>
+</head>
+<style>
+	body {
+  		font-family: Helvetica, Arial, sans-serif;
+  		font-size: 12px;
+	}
+
+	h1 {
+  		font-size: 1.5em;
+	}
+	h2 {
+  		font-size: 1.2em;
+	} 
+</style>
+<body>
+	<h1>lorem 1</h1>
+	<h2>lorem 2</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officia dignissimos itaque dolor, expedita magni ut fugit eligendi officiis! Laboriosam nobis, molestias asperiores hic error saepe amet, repellendus consequuntur vel?</p>
+	<button id="size-12" onclick="makeSizer()">a</button>
+	<button id="size-14" onclick="makeSizer()">a</button>
+	<button id="size-16" onclick="makeSizer()">a</button>
+
+	<script type="text/javascript">
+		// document.getElementById('size-12').onClick = size12
+		// document.getElementById('size-14').onClick = size14
+		// document.getElementById('size-16').onClick = size16
+
+		// function makeSizer() {
+		// 	return function() {
+		// 		document.body.p.style.fontSize = size + 'px'
+		// 	}
+		// }
+		// var size12 = makeSizer(12)
+		// var size14 = makeSizer(14)
+		// var size16 = makeSizer(15)
+
+		//::closures Emulando métodos privados con closuresSección:::::::
+		// var Counter = (function() {
+  // 		var privateCounter = 0;
+  // 		function changeBy(val) {
+  //   		privateCounter += val;
+  // 		}
+		// return {
+		// increment: function() {
+		//   changeBy(1);
+		// },
+		// decrement: function() {
+		//   changeBy(-1);
+		// },
+		// value: function() {
+		//   return privateCounter;
+		// }
+		// }   
+		// })();
+
+		// alert(Counter.value()); /* Muestra 0 */
+		// Counter.increment();
+		// Counter.increment();
+		// alert(Counter.value()); /* Muestra 2 */
+		// Counter.decrement();
+		// alert(Counter.value());  //Muestra 1 *
+		
+
+		//::ejemplo 2
+		var makeCounter = function() {
+		var privateCounter = 0;
+		function changeBy(val) {
+		privateCounter += val;
+		}
+		return {
+		increment: function() {
+		  changeBy(1);
+		},
+		decrement: function() {
+		  changeBy(-1);
+		},
+		value: function() {
+		  return privateCounter;
+		}
+		}  
+		};
+
+		var Counter1 = makeCounter();
+		var Counter2 = makeCounter();
+		alert(Counter1.value()); //Muestra 0 *
+		Counter1.increment();
+		Counter1.increment();
+		alert(Counter1.value()); // Muestra 2 
+		Counter1.decrement();
+		alert(Counter1.value()); // Muestra 1 */
+		alert(Counter2.value()); // Muestra 0 */ 
+	</script>
+</body>
+</html>
