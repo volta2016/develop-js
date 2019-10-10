@@ -1,24 +1,27 @@
 var nombre = 'Sacha', apellido = 'Lifszyc'
 var ultimaLetra = nombre.charAt(nombre.length - 1)
 
+
 var nombreEnMayusculas = nombre.toUpperCase()
 var apellidoEnMinusculas = apellido.toLowerCase()
 
 var primeraLetraDelNombre = nombre.charAt(0)
-var cantidadDeLetrasDelNombre = nombre.length
-
+var cantidadDeLetrasDelNombre = nombre.length //este es un atributo no lo invocamos como funciones 
+var ultimaletra2 = nombre.charAt(cantidadDeLetrasDelNombre - 1);
 
 var str_b = nombre.substr(1, 4)
 
 var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
-var str = nombre.charAt(0) + ' ' + nombreCompleto.charAt(2)
+var str = nombre.charAt(0) + ' ' + nombreCompleto.charAt(2) //accede a S y c
 console.log(`nombre ` + `${nombre}`)
 var nombre_2 = 'kiot'
-console.log(`y las primeras 2 letras son: ${nombre_2.substr(0,2)}`);
+console.log(`y las primeras 2 letras son: ${nombre_2.substr(0,2)}`); //si le decimos 1 va tomar i - 2 va tomar i - o
 console.log(ultimaLetra,cantidadDeLetrasDelNombre)
 console.log(nombreCompleto)
 console.log(str_b)
-console.log(str)
+console.log(str) //consulto srt con la aplicacion de la var nombre
+console.log(ultimaLetra)
+console.log(ultimaLetra)
 
 
 //Si queremos saber cual es primer carácter de un string y 
