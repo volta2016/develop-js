@@ -1,11 +1,15 @@
 var nombre = `Sacha` 
 
 function imprimirNombreEnMayuscula(nombre) {
+	//nwnindow.nombre
 	nombre = nombre.toUpperCase()
 	console.log(nombre)
 }
 
-imprimirNombreEnMayuscula(nombre)
+imprimirNombreEnMayuscula(nombre) //le enviamos este parametro de nombre cuando lo invocamos 
+//no podemos acceder a la var global nombre al menos que nos refiramos explicitamente a window.nombre
+//pero si mos referimos a nombre por parametro no estamos refiriendo a la variable local de esta funcion.
+//si modificamos a nombre de alcancce local no vamos estar contaminando a var global nombre.
 
 //nuevo entorno
 var nombreMusica = 'JAZZ'
@@ -40,3 +44,14 @@ console.log(`impresion fuera de la funcion ${nombreMusica}`)
 // resumen conclusion Cuando Llamas a la función local y le pasas 
 //los argumentos, estos automáticamente se copian dentro de los parámetros de la función global
 
+//resumen code:
+
+//el parametro n solo esta definido en la funcion imprimirNombreEnMayuscula
+//vamos a ver que el var(pararemtro) n tiene un alcance local que significa que solo existe en dentro del cuerpo 
+//de esta funcion, si nostros quiseriamos acceder a n fuera de la funcion, vamos a ver que no existe  ese valor 
+//no esta definido, la var n no esta definida. solo esta definida en la funcion dentro en  imprimirNombreEnMayuscula
+
+//vamos a ver que solo estamos modificando la var locan n pero no la var local nombre
+//js nos permite hacer utilizar el mismo nombre de var. pasar como parametro o var local en vez de n - nombre
+//resumen nombre existe con un alcance global y nombre tambien va existir con otro valor en el alcance local
+//de la funcion  imprimirNombreEnMayuscula
