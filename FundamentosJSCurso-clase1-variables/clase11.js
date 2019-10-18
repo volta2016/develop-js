@@ -40,7 +40,11 @@ function imprimirProfesiones(persona) {
 	}
 }
 const MAYORIA_DE_EDAD = 18
+//magic number para reconocer el programa
+//const no puede modificar queda como valor fijo de programa
+// const MENOR_DE_EDAD < 18
 
+//aplicamos esta funcion aparte para orden del code
 function esMayorDeEdad(persona) {
 	return persona.edad >= MAYORIA_DE_EDAD
 }
@@ -48,6 +52,8 @@ function esMayorDeEdad(persona) {
 function imprimirSiEsMayorDeEdad(persona){
 	//var {nombre} = persona
 	console.log(`¿Es menor o mayor de edad?`)
+	//dentro del if le estoy pasando como parametro la funcion que retorna el resultado si 
+	//persona,edad es mayor de edad
 	if (esMayorDeEdad(persona)){
 
 		console.log(`${persona.nombre} es mayor de edad`)

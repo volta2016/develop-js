@@ -72,7 +72,7 @@ function imprimirSiEsMayorDeEdad(persona){
 // const esMayorDeEdad =  persona => persona.edad >= MAYORIA_DE_EDAD
 //podeos borrar return y las llaves que rodean al cuerpo de la funcion implicitamente
 //van retornar lo que sigue a continuacion de => en este caso se va hacer la comparacion
-//y va a devolverse el valor de esta comparacion. resumimos el codigo que teniamos de 3 lineas
+//y va a devolverse el valor de esta comparacion. resumimos el codigo que teniamos de 3 lineas en 1
 //algo mas que podemos hacer si solo nos interesa el parametro edad es desestructurar persona.edad
 //tenemos que poner parentesis y las llaves 
 
