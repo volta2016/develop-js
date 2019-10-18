@@ -7,10 +7,12 @@ var kyo = {
 
 // var otraPersona = kyo
 // aca corre como el mismo objeto. otraPersona y kyo apuntan al
-// mismo lugar entonces se va modificar en los 2
+// mismo lugar(en memoria ram) entonces se va modificar en los 2
+//si apunta al mismo lugar se va a modificar en los 2
 
 
 var otraPersona = {
+    //objeto literal
 	nombre: 'kyo'
 }
 // tienen los 2 el atributo nombre con el valor kyo  pero son 
@@ -22,6 +24,11 @@ var otraPersona = {
 // y otraPersona el valor que midificamos que fue este otraPersona.nombre = 'Pepe'
 //cambia kyo por Pepe
 
+// var otraPersona {
+//     //objeto literal creando un objeto nuevo
+//     //por mas que estemos deglosando los atributos, es otro espacio en memoria ram
+//     ...kyo
+// }
 
 var jugador = {
 
@@ -30,7 +37,7 @@ edad: 20
 
 }
 // var jugador2 = jugador
-var jugador2= {
+var jugador2 = {
 
     nombre: 'riot',
     edad: 20

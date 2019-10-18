@@ -1,7 +1,7 @@
 var nombre = `Sacha` 
 
 function imprimirNombreEnMayuscula(nombre) {
-	//nwnindow.nombre
+	//wnindow.nombre
 	nombre = nombre.toUpperCase()
 	console.log(nombre)
 }
@@ -22,7 +22,7 @@ function imprimirMusicaMinuscula(n) {
 	//var local
 	var minus = n.toLowerCase()
 	console.log(`en minuscula ${minus}`)
-	console.log(`impresion de nombre Global dentro de la funcion global ${n} y ${d}`)
+	console.log(`impresion de nombre Global dentro de la funcion local ${n} y ${d}`)
 	console.log(`impresion de nombre Global dentro de la funcion ${window.n}`)
 	console.log(`Su ultima local letra es ${n.charAt(3)}`)
 	console.log(`su primeras local 2 letras ${n.substr(0,2)}`)
@@ -41,8 +41,8 @@ imprimirMusicaMinuscula(nombreMusica)
 //no la toma esta en alcance de scope a nivel local
 console.log(`impresion fuera de la funcion ${nombreMusica}`)
 //n no vive a nivel global
-// resumen conclusion Cuando Llamas a la función local y le pasas 
-//los argumentos, estos automáticamente se copian dentro de los parámetros de la función global
+// resumen conclusion Cuando Llamas a la función global y le pasas 
+//los argumentos, estos automáticamente se copian dentro de los parámetros de la función local
 
 //resumen code:
 
@@ -52,6 +52,6 @@ console.log(`impresion fuera de la funcion ${nombreMusica}`)
 //no esta definido, la var n no esta definida. solo esta definida en la funcion dentro en  imprimirNombreEnMayuscula
 
 //vamos a ver que solo estamos modificando la var locan n pero no la var local nombre
-//js nos permite hacer utilizar el mismo nombre de var. pasar como parametro o var local en vez de n - nombre
+//js nos permite hacer utilizar el mismo nombre de var. Para pasar como parametro o var local en vez de n - nombre
 //resumen nombre existe con un alcance global y nombre tambien va existir con otro valor en el alcance local
 //de la funcion  imprimirNombreEnMayuscula

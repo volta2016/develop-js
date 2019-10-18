@@ -1,26 +1,29 @@
 var sasuke = {
 	nombre : 'Sasuke',
 	apellido : 'Uchiha',
-	edad : 19
+	edad : 19,
+	altura: '60cm' 
 }
 var itachi = {
 	nombre : 'Itachi',
 	apellido : 'Uchiha',
-	edad : 21
+	edad : 21,
+	altura: '70cm' 
 }
 
 //función destructurar obj
 function imprimirNombreEnMayuscula(persona) {
-	//vamos a declara la va nombre que va a salir de del objeto persona.nombre
+	//vamos a declara la var nombre que va a salir de del objeto persona.nombre
 	//var nombre = persona.nombre
 	var {nombre} = persona
 	var {apellido} = persona
 	var {edad} = persona
-	console.log(`hola me llamo ${nombre} ${apellido} y tengo y tengo ${edad} `)
+	var {altura} = persona
+	console.log(`hola me llamo ${nombre} ${apellido} y tengo y tengo ${edad} mi altura es ${altura}`)
 
 }
 
-//vamos hacer que la funcion reciba el objeto de la persona y que sepa accerder al nombre
+//vamos hacer que la funcion reciba el objeto de la persona y que sepa accerder al atributo nombre
 // function imprimirNombreEnMayuscula(persona) {
 // 	console.log(persona.nombre.toUpperCase())
 // }
