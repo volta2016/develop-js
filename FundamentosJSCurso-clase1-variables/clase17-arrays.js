@@ -35,6 +35,19 @@ var paula = {
     apellido: 'Barros',
     altura: 1.76
 }
+//pokemon objetos::
+var raichu = {
+    nombre: 'Raichu',
+    tipo: 'eléctrico'
+}
+var bellsprout = {
+    nombre: 'Bellsprout',
+    tipo: 'planta'
+}
+var gengar = {
+    nombre: 'Gengar',
+    tipo: 'fantasma'
+}
 // para indicar que esto es un array vamos a indicar con signo corchete
 //aca vamos a ir poniendo cada una de las variables que quiero que tengo
 //mi array, podemos hacer de numeros, textos, objetos de funciones
@@ -54,7 +67,32 @@ for (var i = 0; i < personas.length; ++i){
   var persona = personas[i]
   console.log(`${persona.nombre} mide ${persona.altura} mts`)
 }
+
+var pokemons = [raichu, bellsprout, gengar]
+
 //en este caso aplicamos la var [i] que acceda al indice [i]
+for (var i = 0; i < pokemons.length; ++i) {
+    var pokemon = pokemons[i]
+    //guardamos la iteracion del array pokemon cada una y luego entramos al atributo
+    //por medio de console.log
+    
+    //detalles del objeto
+    console.log(`${pokemon.nombre}es de tipo ${pokemon.tipo}`)
+
+    // `${pokemon.nombre} es de tipo ${pokemon.tipo}`
+}
+
+//aclarando length
+var x = 'Mozilla'
+var empty = ''
+
+console.log(`Mozilla is ${x.length} code units long`)
+console.log(`the empty string has a length of ${empty.length}`)
+
+//en num del programa pokemons
+console.log(pokemons.length)
+
+
 
 
 

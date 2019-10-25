@@ -6,6 +6,9 @@ var kyo = {
 }
 console.log(`Al inicio del año ${kyo.nombre} pesa ${kyo.peso}kg`)
 
+// podríamos ejecutar este programa multiples veces y podriamos sacar el promedio de cuantos días pasan 
+// cuando llega a la meta de peso 
+
 //aumentar de peso va a ser una una función, los parametros van entre parentesis que va 
 //a recibir una persona y un incremento => y lo que va hacer es 
 //persona punto peso += incremento.
@@ -17,9 +20,10 @@ console.log(`Al inicio del año ${kyo.nombre} pesa ${kyo.peso}kg`)
 const INCREMENTO_PESO = 0.2
 const DIAS_DEL_ANO = 365
 
-const aumentarDePeso = (persona) => persona.peso += INCREMENTO_PESO
-const adelgazarDePeso = (persona) => persona.peso -= INCREMENTO_PESO
+const aumentarDePeso = persona => persona.peso += INCREMENTO_PESO
+const adelgazarDePeso = persona => persona.peso -= INCREMENTO_PESO
 // como vimos anteriormente 200 son magic number no sabemos bn de donde salen.
+//por eso lo definimos como const
 
 
 //como calculamos si aumenta o baja de peso con el randon que teniamos 
@@ -40,6 +44,13 @@ var dias = 0
 //que esta condicion se cumpla entre los parenstesis vamos poner esa condicion y mientra que
 //sea verdadera entonces el código entre llaves se va a repetir (miestras el peso de kyo
 //este por arriba de la meta este code se va a repetir)
+
+//vamos a debugiar nuestro programa es decir meternos en la ejecucion del el mismo 
+//si tenemos la consola de desarrollo abierta va a detener la ejecución del programa
+//cada vez que lea la palabra debugger, podemos ver esto en sources
+//podemos dar entrar a la siguiente opcion con la flecha hacia abajo podemos entrar a la 
+//funcion de la condicion y ver el error tenemos Math.random pero nunca la estamos invocando.
+//si queremos salir de la ejeccion y subir donde esa funcion fue llamada damos a flecha hacia arriba
 while (kyo.peso > META) {
 	// debugger
 	if (comeMucho()) {
@@ -57,3 +68,15 @@ while (kyo.peso > META) {
 
 console.log(`Pasaron ${dias} días hasta que ${kyo.nombre} adelgazó 3kg`)
 
+while () {
+	codigo que se ejecuta
+}
+while () {
+	codigo que se jecuta
+}
+while () {
+	codigo que se ejecuta
+}
+while () {
+	codigo que se ejecuta 
+}
