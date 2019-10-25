@@ -32,7 +32,7 @@ function imprimirNombreEnMayuscula2 (persona) {
 function imprimirenMinuscula({nombre}) {
 	console.log(nombre.toLowerCase())
 }
-//función que recibe la propiedad de objeto como parametro
+//función que recibe la propiedad del objeto como parametro
 
 function imprimirNombreEnMayuscula3({nombre, apellido}) { 
 	console.log(`hola ${nombre.toUpperCase()} ${apellido.toUpperCase()}`)
@@ -53,6 +53,7 @@ function imprimirNombreEnMayuscula({nombre, apellido, edad}){
 
 // lo mismo que la funcion de arriba pero le saco el parametro del obj persona 
 //y aplico los 3 atributos del objeto
+
 // resumen de la funcion 
 // function imprimirEnMayusculas(persona) {
 //    var nombre = persona.nombre.toUpperCase();

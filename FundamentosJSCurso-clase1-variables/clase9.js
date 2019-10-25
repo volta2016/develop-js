@@ -48,3 +48,5 @@ if (jugador === jugador2) {
 } else {
     console.log('Falso')
 }
+console.log(otraPersona.nombre)
+console.log(x === y)

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arrow function</title>
+</head>
+<body>
+
+
+<!-- <script src="clase12.js"></script> -->
+<script>
+
+//function 
+function getRandomId(max) {
+    return Math.floor(Math.random()* (max - 1) +1)
+}
+//console.log(getRandomId(150)) 
+
+//arrow function se conoce también se conoce como una funcion anonima
+// () => {
+
+// }
+//aunque también se pueden declarar como una expresión 
+//como se hace tu asigna esta arrow function a una var
+const getRandomId = (max) => {
+    return Math.floor(Math.random() * (max - 1) + 1)
+
+}
+// console.log(getRandomId(150)) 
+//podemos resumir mas el code del arrow 
+// const getRandomId = (max) =>   Math.floor(Math.random() * (max - 1) + 1)
+//yo tengo un solo parametro le puedo quitar los parentesis 
+// const getRandomId = max =>   Math.floor(Math.random() * (max - 1) + 1)
+
+// puedo pasarle nada a mi console.log y pasarle 150 en rbuto al Math.random
+const getRandomId = _ =>   Math.floor(Math.random() * (150 - 1) + 1)
+
+// console.log(getRandomId())
+//objeto
+const example = {
+    max: 150,
+    getRandomID: function() {
+        return Math.floor(Math.random() * (this.max - 1) + 1)
+    }
+}
+//importantisimo: ahora como este max no esta declarado y no viene como valor en esta funcion por que no la
+//estoy pasando, mas bien la tengo como un key dentro de mi objeto que tal si ultilizo mi objeto.
+//y para eso tengo que utilizar this 
+
+console.log(
+    example1.getRandomId()
+    )
+//hagamos lo mismo pero version arrow function
+//asi se nos bugea dentro de un objeto
+// const example2 = {
+//     max: 150,
+//     getRandomID: () => {
+//         //console.log(this) this aca es el objeto window 
+//         //en arrow function va eredar el contecto superior no va tomar el objeto directo si no va ires a window 
+//         return Math.floor(Math.random() * (this.max - 1) + 1)
+//     }
+// }
+// console.log(
+//     example2.getRandomId()
+// )
+
+
+
+
+// const getRandomId = objeto => objeto.nombre > GetId
+
+const pokemon = new Pokemon(69) //creamos la instacia de la clase pokemon
+</script>		
+</body>
+</html>

@@ -43,7 +43,7 @@ const MAYORIA_DE_EDAD = 18
 
 function imprimirSiEsMayorDeEdad(persona){
 	//var {nombre} = persona
-	console.log(`¿Es menor o mayor de edad?`)
+	console.log(`¿Es menor o mayor de edad ${persona.nombre}?`)
 	if (esMayorDeEdad(persona)){
 
 		console.log(`${persona.nombre} es mayor de edad`)
@@ -61,6 +61,7 @@ function imprimirSiEsMayorDeEdad(persona){
 //   }
 // }
 //:::funcion anonima:::
+//cada vez vamos a dejar esto mas criptico podemos ir sacando code
 // const esMayorDeEdad = function (persona) {
 // 	return persona.edad >= MAYORIA_DE_EDAD
 // }
@@ -70,7 +71,10 @@ function imprimirSiEsMayorDeEdad(persona){
 // 	return persona.edad >= MAYORIA_DE_EDAD
 // }
 // const esMayorDeEdad =  persona => persona.edad >= MAYORIA_DE_EDAD
-//podeos borrar return y las llaves que rodean al cuerpo de la funcion implicitamente
+
+
+
+//podemos borrar return y las llaves que rodean al cuerpo de la funcion implicitamente
 //van retornar lo que sigue a continuacion de => en este caso se va hacer la comparacion
 //y va a devolverse el valor de esta comparacion. resumimos el codigo que teniamos de 3 lineas en 1
 //algo mas que podemos hacer si solo nos interesa el parametro edad es desestructurar persona.edad
@@ -81,14 +85,14 @@ const esMayorDeEdad =  ({edad}) => edad >= MAYORIA_DE_EDAD
 //que le vamos a pasar un objeto que tiene una edad ({edad}) y nos va retornar si esa
 //edad es mayor e igual de edad a la const MAYORIA_DE_EDAD = 18 que es una constante que en este 
 //caso va a ser 18
-const esMenorDeEdad = ({edad}) => edad < MAYORIA_DE_EDAD
+// const esMenorDeEdad = ({edad}) => edad < MAYORIA_DE_EDAD
 
 //lo que estamos haciendo es que a la funcion es esMenorDeEdad le pasamos una funcion
 //que le vamos a pasar el objeto edad, luego => quiere decir que se aplica la función
 //como una arrow function, esto va retornar si es menor  MAYORIA_DE_EDAD
 // otra forma de const en la cual aplico no esMayorDeEdad
 
-// const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
+const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
 //const esMenorDeEdad = (persona) => !esMayorDeEdad(persona)
 
 //aquí aplico la funcion al if solo aplicando el nombre de la const
@@ -108,11 +112,6 @@ function permitirAccesoDesafio(persona)  {
 // 	}
 // }
 
-imprimirProfesiones(kyo)
-imprimirSiEsMayorDeEdad(kyo)
-imprimirSiEsMayorDeEdad(Fukui)
-permitirAccesoDesafio(Fukui)
-ImprimirSiEsMenorDeEdad(kyo)
 //Mejorar code
 function ImprimirSiEsMenorDeEdad (persona) {
 	if (esMenorDeEdad(persona)) {
@@ -122,7 +121,49 @@ function ImprimirSiEsMenorDeEdad (persona) {
 	}
 }
 
-// //puedo aplicar este if en  ImprimirSiEsMenorDeEdad  
-// if (esMenorDeEdad(persona) < esMayorDeEdad) 
+imprimirProfesiones(kyo)
+imprimirSiEsMayorDeEdad(kyo)
+imprimirSiEsMayorDeEdad(Fukui)
+permitirAccesoDesafio(Fukui)
+permitirAccesoDesafio(Kyo)
+ImprimirSiEsMenorDeEdad(kyo)
 
+
+// //puedo aplicar este if en  ImprimirSiEsMenorDeEdad  
+// if (esMenorDeEdad(persona) < esMayorDeEdad) []
+
+//EJERCICIO DE COMO AHORRAR CARACTERES EN UNA ARROW FUNCTION
+// const esMayorDeEdad = function (persona) {
+// 	return persona.edad >= MAYORIA_DE_EDAD
+// }
+// const esMayorDeEdad = (persona) => {
+// 	return persona.edad >= MAYORIA_DE_EDAD
+// }
+
+// //cada vez podemos seguir ahorrando caracteres cada vez se pone mas criptico
+// const esMayorDeEdad = persona => {
+// 	return persona.edad >= MAYORIA_DE_EDAD
+// }
+// const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD
+// //para desectructurar el parametro (persona), no podemos poner la llaves directamente
+// //tenemos que poner ({edad}) y borrar pesona
+
+// const esMayorDeEdad = ({edad}) =>  edad >= MAYORIA_DE_EDAD
+// //de esta manera esta funcion lo que hacemos es es pasar una funcion, que le vamos a pasar un objeto que
+// //tiene una edad y nos va retornar si edad es igual a la mayoria de edad que este caso 
+// //va a ser 18
+
+// // const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD
+// // const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD
+// //practica
+// const esMenorDeEdad = persona => persona.edad < MAYORIA_DE_EDAD
+// const esMayorDeEdad = ({edad}) => edad < MAYORIA_DE_EDAD
+// const esMayorDeEdad = persona => {
+// 	return persona.edad >= MAYORIA_DE_EDAD
+// }
+
+// //const nombrefunction = parametro => objeto.atributo.queretorna > var declarada
+// const esMayorDeEdad = persona => persona.edad > MAYORIA_DE_EDAD
+// const esMayorDeEdad = ({edad}) => edad > MAYORIA_DE_EDAD
+// const esMayorDeEdad = persona => persona.edad > MAYORIA_DE_EDAD  
 

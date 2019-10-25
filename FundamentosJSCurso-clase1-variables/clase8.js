@@ -21,13 +21,13 @@ function imprimirNombreEnMayuscula(persona) {
 }
 
 /*resumen: 
-los obejetos que pasamos como parametros se pasan por referecia (eso quiere decir que si los modificamos dentro del cuerpo de una
+los objetos que pasamos como parametros se pasan por referecia (eso quiere decir que si los modificamos dentro del cuerpo de una
 funcion su valor se va ver modificado de fuera de esa funcion )
 que podemos hacer con esto podemos hacer 2 cosas 
 1-. lo dejamos asi como esta y decimos que esta funcion va a tener ese efecto de helado(side effect) que puede ser lo que queramos
 que podemos decir ok el objeto que le pasamos queremos que se vea modificado despues de pasarle la funcion. 
 2-. o tambien podemos devolver un nuevo objeto, y este nuevo objeto podria tener todo lo mismo de la persona excepto la edad
-que deberia ser += 1
+que deberia ser + 1
 entonces lo que podemos hacer retornar de esta funcion un objeto nuevo, copiando todo lo que tenia el objeto anterior 
 eso lo hacemos de la siguiente manera:
 ...persona 
@@ -64,7 +64,7 @@ var sasukeMasViejo = cumpleanos(sasuke)
 console.log(sasukeMasViejo.edad)
 
 // de esta forma estoy pisando los atributos de los objetos
-// functionapellido(persona){ //recibir el objeto
+// function apellido(persona){ //recibir el objeto
 // 	return{ 
 // 		...persona,
 // 		apellido:'hola soy yo',

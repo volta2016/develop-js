@@ -15,7 +15,7 @@ imprimirNombreEnMayuscula(nombre) //le enviamos este parametro de nombre cuando 
 var nombreMusica = 'JAZZ'
 //var global 
 
-//funcion + parametro n local
+//funcion + parametro nombre musica
 function imprimirMusicaMinuscula(n) {
 	var nombre_x = `dataerror`
 	var d = nombre.toLowerCase()

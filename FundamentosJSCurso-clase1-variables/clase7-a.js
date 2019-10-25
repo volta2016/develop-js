@@ -41,7 +41,6 @@ class Pokemon {
 		this.nombre = nombre
 		this.tipo = tipo
 	}
-	
 }
 
 // class Humano {
@@ -56,6 +55,7 @@ function queTipoDePokemon(Pokemon){
 
 }
 var pikachu = new Pokemon('Pikachu','Electrico')
+var gengar = new Pokemon ('Gengar', 'Fantasma')
 
 function ImprimirNombreYEdad ({nombre, edad}) {
 	//var { nombre, edad } = persona //es lo mis pero lleva persona como parametro en la function
@@ -72,6 +72,7 @@ ImprimirNombreYEdad(hector)
 ImprimirNombreYEdad(luis)
 
 queTipoDePokemon(pikachu)
+queTipoDePokemon(gengar)
 
 // otro ejemplo::
 // function imprimirNombreYEdad(persona) {
