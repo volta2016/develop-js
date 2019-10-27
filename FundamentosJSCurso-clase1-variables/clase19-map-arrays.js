@@ -58,14 +58,14 @@ var personas = [sacha, alan, martin, dario, vicky, paula]
 //para que return el valor de las personas en 100 debemos envolver en parentesis después de la funcion
 
 const pasarAlturaACms = persona => ({
-       ...persona,
+    ...persona,
     altura: persona.altura * 100
 })
-//nos queda mas prolijo.
+//nos queda mas prolijo. el code de arriba
     // persona.altura = persona.altura * 100
     // persona.altura *= 100
 
-
+//modificamos la arrow function agregandole parentesis para poder devolver un objeto
 
 var personasCms = personas.map(pasarAlturaACms)
 

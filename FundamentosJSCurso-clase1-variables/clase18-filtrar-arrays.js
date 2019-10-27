@@ -37,7 +37,7 @@ var paula = {
     altura: 1.6
 }
 //definimos el arrow function esta condicion va ir resiviendo, cada uno
-//de los elementos del array.Entonces filter va  iterar por nosotros el array
+//de los elementos del array. Entonces filter va  iterar por nosotros el array
 //y pasando cada uno de los elementos, etonces lo que tenemos que hacer es 
 //return si esta persona cumple la condicion de ser alta o no y esa condicion
 //la estamos definiendo en el "arrow".
@@ -46,6 +46,7 @@ var paula = {
 //un solo parametro no hace falta los parentesis así que lo vamos a quitar.
 //y luego si solo lo que estamos haciendo en la funcion es un return de algo
 //no hacen falta las llaves
+// const esAlta = persona => persona.altura > 1.8
 const esAlta = ({altura}) => altura > 1.8
 const esBaja = ({altura}) => altura <= 1.6
 

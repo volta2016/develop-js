@@ -1,4 +1,4 @@
-//arrays nos va permitir agrupar cierto tipo de dato por ejemplo 
+ //arrays nos va permitir agrupar cierto tipo de dato por ejemplo 
 //numero, letras, strings, objetos, boleanos, funciones etc.
 //dentro de una coleccion. luego vamos a realizar ciertas operaciones
 //dentro de esa colección.
@@ -51,27 +51,15 @@ var personas = [sacha, alan, martin, dario, vicky, paula]
 
 
 
-//forma no mas proliga como funcion
-// var personasBajas = personas.filter(esBaja = ({altura}) => altura <= 1.79)
 
-
-
-const pasarAlturaACms = persona => ({
-       ...persona,
-    altura: persona.altura * 100
-})
-//nos queda mas prolijo.
-    // persona.altura = persona.altura * 100
-    // persona.altura *= 100
-
-
-
-var personasCms = personas.map(pasarAlturaACms)
+// Pare esto es valido hacer un ciclo for de la siguiente manera.
 
 // var acum = 0
-// for (var i = 0; i < personas.length; i++) {
-//     acum = acum + personas[i].cantidadLibros
+
+// for(var i = 0; i < personas.length; i++){
+//     acum = acum + personas [i].cantidadDeLibros
 // }
+// console.log(`Entotal todos tienen ${acum} libros`)
 // //entonces vamos a ir a sumandole el acomulador el valor que ya tenia mas
 // //la cantidadLibros que tiene cada una de las personas
 
