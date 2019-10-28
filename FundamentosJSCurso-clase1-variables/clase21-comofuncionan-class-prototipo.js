@@ -1,4 +1,4 @@
-//vamos a definir un prototipo que va a definir el protipo 
+//vamos a definir un prototipo que va a definir el protipo de personas
 //para definir un prototipo lo unico que tenemos que definir es una funcion 
 //::esta funcion es la que se va a ejecutar cuando creemos una nueva persona, es como
 //::en otro lenguaje se conoce como constructor
@@ -8,6 +8,8 @@ function Persona(nombre, apellido, altura) {
     this.apellido = apellido
     this.altura = altura
 }
+//esto seria como crear objetos:::
+
 //otra cosa que podemos hacer es empezar a pasarle parametros a nuestro prototipo
 //a nuestra funcion persona(nuestro constructor) que estamos usando para construir
 //crear objetos con el prototipo persona entonces le podemos pasar parametros:
@@ -17,6 +19,11 @@ function Persona(nombre, apellido, altura) {
 //podemos hacer referencia a ese objeto dentro de esta funcion como como this
 //this va hacer referencia a ese objeto que se acaba de construir
 //entonces this.nombre le vamos a asignar nombre
+
+//acá lo que estamos diciendo que dentro del prototipo de persona va existir un atributo 
+//saludar que va a ser una función sin parámetros que lo que va hacer un 
+//consolé.log(`hola me llamo ${this.nombre} ${this.apellido}`)
+
 Persona.prototype.saludar = function () {
     if (soyAlto(this)) {
         console.log(`hola, soy ${this.nombre} ${this.apellido}, soy alto`)
@@ -32,7 +39,7 @@ Persona.prototype.saludar = function () {
 //me refiero a la de arriba linea 6 del code
 //notemos que por cada new persona se va ejecutar la funcion
 //notemos que estamos utilizando la palabra reservada del lenguaje new
-//como es reservada no la podemos usar como funcion por ejemplo
+//como es reservada no la podemos usar como funcion por ejemplo o var new
 //"new": es una palabra para crear nuevos objetos dado un protipo
 
 //si nostros no ponemos la palabra new en consola preguntamos por sacha vemos que es undefined
@@ -51,6 +58,8 @@ var sacha = new Persona('Sacha', 'lifszyc', 1.72)
 var erika = new Persona('Erika', 'Luna', 1.65)
 var arturo = new Persona('Arturo', 'Martinez', 1.90)
 arturo.saludar()
+erika.saludar()
+sacha.saludar()
 
 // Persona.prototype.soyAlto = function () {
 //     return this.altura > 1.8
@@ -62,3 +71,6 @@ arturo.saludar()
 // ir utilizandolas pero no ir modificandola a medida que que va pasando nuestro codigo  y metemos algo
 // dentro de prototype y despues metemos otra cosa siempre conviene hacerlo en mismo lugar
 // para que despues sean accesibles una duda que puede tener
+
+//::::es importante que dejar como arrow function y que dejar con function clasico por que arrow
+//hace refenrecia a this del objeto mas cercano en este caso paso a tomar a window 

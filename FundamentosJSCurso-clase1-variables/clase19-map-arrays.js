@@ -59,7 +59,9 @@ var personas = [sacha, alan, martin, dario, vicky, paula]
 
 const pasarAlturaACms = persona => ({
     ...persona,
-    altura: persona.altura * 100
+    altura: persona.altura * 100,
+    appellido: 'deftones' //slucionado para pisar valor
+    
 })
 //nos queda mas prolijo. el code de arriba
     // persona.altura = persona.altura * 100
