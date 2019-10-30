@@ -1,4 +1,4 @@
-//vamos a definir un funcion que va a definir el protipo 
+ //vamos a definir un funcion que va a definir el protipo 
 //para definir un prototipo lo unico que tenemos que definir es una funcion 
 //::esta funcion es la que se va a ejecutar cuando creemos una nueva persona, es como
 //::en otro lenguaje se conoce como constructor
@@ -78,7 +78,7 @@ function Persona(nombre, apellido, altura) {
 // }
 
 //___por ejemplo para agregar una nueva funcion que ejecute en navegador debemos agregar
-//a nuestro constructor persona.prototype.saludar
+//a nuestro constructor Persona.prototype.saludar
 
 //lo aplicamos justo despues del contructor Persona() nuestro nuestro constructor persona.prototype.salud 
 Persona.prototype.saludar = function() {
@@ -99,7 +99,7 @@ Persona.prototype.saludar = function() {
 
 // la aplicamos como arrow function
 
-// Persona.prototype.soyAlto = () =>  this.altura > 1.8
+//Persona.prototype.soyAlto = () =>  this.altura > 1.8
 //dejamos el codigo hasta con un bug lo unico que hemos hecho fue pasar una funcion 
 //a arrow function.
 //que pasa con las arrow function ? que pasa con el this dentro de ellas?
@@ -109,15 +109,21 @@ Persona.prototype.saludar = function() {
 //Asigna esta función pero cambia el this dentro de la función.
 //(dentro de las llaves)
 //Lo que hace es que el this va apuntar al this que este afuera  
-//de esta función acá o sea a linea  fuera del function.
+//de esta función acá o sea a linea fuera del function.
+//this dentro de la arrow function es window
 // Persona.prototype.soyAlto = () => {
 //   debugger
 //   return this.altura > 1.8
 // }
 // this === window //esto es true en consola
-
+const ALTURA_MAX = 1.8
 Persona.prototype.soyAlto = function() {
-  return this.altura > 1.8
+    if (this.altura <= 1.8) {
+        console.log(`hola soy ${this.nombre} soy bajo mido ${this.altura}`)
+    } else if (this.altura >= 1.8) {
+        console.log(`eres alto mides lo mismo o mas que ${ALTURA_MAX} `)
+    }
+    
 }
 //esta condicion nunca se va dar por que es objeto window
 //lo que queremos hacer un nuevo prototype que sea de desarrollador
@@ -127,9 +133,10 @@ Persona.prototype.soyAlto = function() {
 //::esta funcion va a ser la funcion que se va ejecutar cuando creemos 
 //nuevos tipos de desarroladores::
 
-function Desarrollador (nombre, apellido) {
+function Desarrollador (nombre, apellido, altura) {
     this.nombre = nombre
     this.apellido = apellido
+    this.altura = altura
 
 }
 
@@ -163,20 +170,27 @@ Desarrollador.prototype.saludar = function () {
 //vamos a querer llamar esta funcion - primero la clase hija y luego la clase padre
 //mejor dicho el protitipo padre persona()
 //y ahora si vamos a definir la funcion heredaDe
+Desarrollador.prototype.soyAlto = function () {
+    if (this.altura > 1.8) {
+        console.log(`hola me llamo ${this.nombre} ${this.apellido}  mido ${this.altura}`)
+    }
+}
 
+// var soyAlto = persona => persona.altura >= 1.80
 
-var soyAlto = persona => persona.altura >= 1.80
-
-// var sacha = new Persona('Sacha', 'lifszyc', 1.72)
+var sacha = new Persona('Sacha', 'lifszyc', 1.62)
 // var erika = new Persona('Erika', 'Luna', 1.65)
 // var arturo = new Persona('Arturo', 'Martinez', 1.90)
 // arturo.soyAlto()
 // arturo.saludar()
-
+var arturo = new Desarrollador('Arturo', 'Martinez', 1.90)
 //__orden:
 //function 
 //var
 //function()invocar
-//en conlusión no se pueden usar prototipos en array function 
+//en conlusión no se pueden usar prototipos en arrow
 
-
+sacha.saludar()
+sacha.soyAlto()
+arturo.saludar()
+arturo.soyAlto()

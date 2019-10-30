@@ -34,6 +34,10 @@ const opts = {crossDomain: true}//idicamos a jquery que este request se va hacer
 //const opts = a este objeto
 const onPeopleResponse = function (persona) {
     console.log(`hola yo soy ${persona.name}`)
+    // console.log(arguments)//para preguntar los argumentos de get - jquery.get(
+    //el success en la funcion del callback que es ejecutada si el request es exitoso
+    //el primer parametro lo podemos llama como data o luke
+    
 }
 
 $.get(lukeUrl, opts, onPeopleResponse)//por ultimo vamos estar poniendo nuestro famoso callback

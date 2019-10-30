@@ -19,7 +19,7 @@ class Persona {
         //si acá no nos pasaron nada entonces no se va ejecutar y esta condicion va a ser falsa.
         //otros ejemplos (null) va a ser siempre false (0) va a ser siempre false. si tenemos algun valor que 
         //de 0 va a dar siempre false, cualquier cosa ({}) un objeto que este vacio va a ser verdadero, 
-        //un array([]) aunque este vacio va a ser verdadero, un strigs ('jkhkj')va a ser verdadro (ya un strins)
+        //un array([]) aunque este vacio va a ser verdadero, un strings ('jkhkj')va a ser verdadro (ya un strins)
         //vacio no. 
         //*una funcion existe si nos pasan algo va a da verdadero dentro de una condición.
         //si no estamos pasando nada saludar() y el if va terminando siendo undifined dentro de un 
@@ -38,9 +38,9 @@ class Persona {
 //**ahora vamos a saludar de persona lo que vamos hacer es recibir como parametro esta funcion 
 //podemos ponerle al paremetro "el nombre que nosotros queramos fn por ejemplo, entonces lo que 
 //vamos hacer es que esta funcion sea opcional, tal vez nos la mandan o tal vez no"
-//a sahca podemos no mandarsela y borramos *responderSaludo este debe funcionar correctamente
+//a sacha podemos no mandarsela y borramos *responderSaludo este debe funcionar correctamente
 //se le responde a erika y arturo
-//**entonces vamos a ir al saludar y vamos a preguntar dentro de la funcion con un if si nos 
+//**entonces vamos a ir al saludar y vamos a preguntar dentro de la funcion con un if si nos pasa
 //algo aqui dentro de la funcion puede ser que esta funcion no lo venga nada entonces
 //tenemos que preguntar si esta funcion esta definida
 
@@ -48,7 +48,7 @@ class Persona {
 //como aplicamos la herencia: ante de las llaves le vamos a poner la parte de la herencia 
 //como hacemos que herede de otra clase lo que se llama herencia acá se llama extension,
 //vamos a decir que esta clase extiende de Persona
-class Desarrollador extends Persona {
+class Desarrollador extends Persona { 
     constructor (nombre, apellido, altura) {
         super (nombre, apellido, altura)//para llamar al constructor de la clase padre debemos utilizar super
         //a partir de acá podemos llamar a this sin super js lo marca como un erros

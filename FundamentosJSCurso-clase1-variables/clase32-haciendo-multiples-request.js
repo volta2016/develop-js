@@ -9,7 +9,7 @@ const PEOPLE_URL = 'people/:id'
 //este metodo nos prermite hacer un request y acepta varios parametros.
 //1-.el primero de los parametros va hacer la url a la cual queremos acceder en este caso
 //va hacer la url completa en primer lugar queremos obtener a Luke Skywalker y que se encuentra
-//en people 1, //**entonces vamos a llamar al metodo que tienen todo los string. que .replace
+//en people 1, //**entonces vamos a llamar al metodo que tienen todo los string que es .replace
 //y le tenemos que decir que strings queremos que cambie en este caso :id y por que strings
 //queremos que cambie a 1
 //tenemos que remplazar el :id por un id valido en caso de luke es el 1
@@ -40,9 +40,12 @@ function obtenerPersonaje (id) {
     const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}` //entonces vamos a llamar al metodo que tienen todo los string. que .replace
     $.get(url, opts, onPeopleResponse)
 }
-obtenerPersonaje(1)
-obtenerPersonaje(2)
-obtenerPersonaje(3)
+for( var i = 0; i <= 15; i++) {
+  obtenerPersonaje(i)
+}
+// obtenerPersonaje(1)
+// obtenerPersonaje(2)
+// obtenerPersonaje(3)
 //esto es e asincrinismo de js en su maximo explendor entender que vamos a llamar a un metodo asincronico 
 //en este caso multiple metodos asincornicos que no sabemos en que orden no van a llegar
 //las respuestas eso simplemente depende del servidor y de cuanto tarda en responder cada
@@ -89,20 +92,20 @@ obtenerPersonaje(3)
 
 //_________Impresión de los 25 primeros personajes:
 
-const API_URL = 'https://swapi.co/api/'
-const PEOPLE_URL ='people/:id'
+// const API_URL = 'https://swapi.co/api/'
+// const PEOPLE_URL ='people/:id'
 
-const options = {crossDomain: true}
-const onePeopleResponse = function(people){
-  console.log(`Hola, yo soy ${people.name}`)
-}
+// const options = {crossDomain: true}
+// const onePeopleResponse = function(people){
+//   console.log(`Hola, yo soy ${people.name}`)
+// }
 
-function obtenerPersonaje(id){
-  consturl = `${API_URL}${PEOPLE_URL.replace(':id', id)} `
-  $.get(url, options, onePeopleResponse)
-}
-var contador = 0
-for(var i = 0; i < 25; i++){
-  contador++ //con esto le va sumando uno en teoria 
-  obtenerPersonaje(contador)
-}
+// function obtenerPersonaje(id){
+//   consturl = `${API_URL}${PEOPLE_URL.replace(':id', id)} `
+//   $.get(url, options, onePeopleResponse)
+// }
+// var contador = 0
+// for(var i = 0; i < 25; i++){
+//   contador++ //con esto le va sumando uno en teoria 
+//   obtenerPersonaje(contador)
+// }

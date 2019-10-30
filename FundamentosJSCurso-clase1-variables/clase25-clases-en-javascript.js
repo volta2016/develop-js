@@ -21,11 +21,12 @@ class Persona {
 //vamos a decir que esta clase extiende de Persona
 class Desarrollador extends Persona {
     constructor (nombre, apellido, altura) {
-        super (nombre, apellido, altura)//para llamar al constructor de la clase padre debemos utilizar super
+        super (nombre, apellido, altura)//para llamar al constructor de la clase padre debemos utilizar "super"
         //a partir de acá podemos llamar a this sin super js lo marca como un erros
         // this.nombre = nombre
         // this.apellido = apellido
         // this.altura = altura
+        //con super ya nos olvidamos de poner esto aca 
     }
 
     saludar() {
@@ -118,3 +119,5 @@ var arturo = new Desarrollador('Arturo', 'Martinez', 1.90)
 // }
 // this === window //esto es true en consola
 
+sacha.saludar()
+arturo.saludar()
