@@ -52,6 +52,17 @@ obtenerPersonaje(1)
     console.log(`el personaje 7 es ${personaje7.name}`)
  })
  .catch(onError)
+
+//aplicando for con promesas aca incocamos y mostramos la respuesta asincrona
+// for (i = 1; i < 7; i++) {
+//    obtenerPersonaje(i)
+//      .then( function(personaje){
+//         console.log(`El personaje ${i} es ${personaje.name}`)
+//         return obtenerPersonaje(i+1)
+//      })
+//      .catch(onError)
+// }
+
  
 // obtenerPersonaje(1, function (personaje) {
 //      console.log(`hola, yo soy ${personaje.name}`)

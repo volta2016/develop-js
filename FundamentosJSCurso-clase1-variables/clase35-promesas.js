@@ -8,12 +8,16 @@ const PEOPLE_URL = 'people/:id'
 const opts = {crossDomain: true}//idicamos a jquery que este request se va hacer hacia otra pag
 
 //callback a esta funcion también la podemos llamar cv o fn
+
+//acá tenemos el objeto que es una promesa es un valor que aun no conocemos ese valor nos va 
+//retornar cuando entre al estado pending, si se resuelve pasa al estado fullfilled y si no se 
+//resuelve para al estado reject
 function obtenerPersonaje (id) {
     return new Promise((resolve,reject) => {
      const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`     
      $
      .get(url, opts, function (data) {
-        resolve(data)
+        resolve(data)//esta funcion no se va ejecutar hasta que el get sea exitoso
      })
      .fail(() => reject(id))  
     })
@@ -23,8 +27,10 @@ function onError(id) {
     console.log(`sucedio un error al obtener al personaje ${id}`)
 }
 
+//acá obtenemos la resolucion de la promesa con .then y .catch es el error
+//la invocamos parandole el ID,
 obtenerPersonaje(1)
- .then(function(personaje){
+ .then(function (personaje){
     console.log(`el personaje 1 es ${personaje.name}`)
 
  })

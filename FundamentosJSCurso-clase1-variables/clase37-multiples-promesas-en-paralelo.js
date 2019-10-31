@@ -41,7 +41,7 @@ Promise
  .then(personajes => console.log(personajes))
  .catch(onError)
 
-
+//las promesas tienen un gran potencia por sobre los callback
 //:::::::::ejemplo con planetas id
 
 // const SW_API_URL = 'https://swapi.co/api/'
@@ -78,7 +78,34 @@ Promise
 //  .all(Promesas_Planetas)
 //  .then(PlanetaSuccess)
 //  .catch(PlanetaReject)
+///::::otro ejemplo con fetch
+// const URL ='https://swapi.co/api/people/:id';
 
+// function obtenerPersonajeid(ids){
+//    let id = ids;
+//     return new Promise((resolve, reject) => {
+//       fetch(`${URL.replace(':id', id)}`)
+//       .then( response => resolve(response.json())) 
+//       .catch(err => {  
+//         var error = `${err} Reference id #${id}`;
+//         reject(error);
+//       })
+//     })
+// }
+
+// var ids = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+// var promesas = ids.map(ids => obtenerPersonajeid(ids));
+
+// Promise
+// .all( promesas )
+//  .then( Personaje => {
+//     Personaje.forEach((personaje, index) => {
+//       console.log(`EL PERSONAJE ${index + 1} ES: ${personaje.name}`);
+//     })
+//  })
+//  .catch( error => {
+//    console.log(`HA OCURRIDO UN ERROR -> ${error}`);
+//  }); 
 // obtenerPersonaje(1)
 //  .then(personaje1 => {
 //     console.log(`el personaje 1 es ${personaje1.name}`)
@@ -108,3 +135,4 @@ Promise
 //     console.log(`el personaje 7 es ${personaje7.name}`)
 //  })
 //  .catch(onError)
+

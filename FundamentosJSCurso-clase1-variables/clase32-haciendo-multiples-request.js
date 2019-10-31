@@ -9,14 +9,15 @@ const PEOPLE_URL = 'people/:id'
 //este metodo nos prermite hacer un request y acepta varios parametros.
 //1-.el primero de los parametros va hacer la url a la cual queremos acceder en este caso
 //va hacer la url completa en primer lugar queremos obtener a Luke Skywalker y que se encuentra
-//en people 1, //**entonces vamos a llamar al metodo que tienen todo los string que es .replace
+//en people 1, 
+//2-.**entonces vamos a llamar al metodo que tienen todo los string que es .replace
 //y le tenemos que decir que strings queremos que cambie en este caso :id y por que strings
 //queremos que cambie a 1
 //tenemos que remplazar el :id por un id valido en caso de luke es el 1
 //js lo reconoce como numero pero lo pasa a string
 //$.get(`${$API_URL}${PEOPLE_URL.replace(':id', 1)}`)
 //esto todo lo que esta aca es parametro de la funcion peso get de jquery
-//2-. el segundo parametro es indicarle a jquery que este request se va hacer hacia
+//3-. el segundo parametro es indicarle a jquery que este request se va hacer hacia
 //otra pagina no es la pagina actual no es el archivo que tenemos aca, etonces eso lo 
 //hacemos con una "," y poniendo un objeto podemos poner varias opciones que queremos
 //decirle a jquery pero la que nos intereza es {cross domain : true}
