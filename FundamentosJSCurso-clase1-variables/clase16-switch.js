@@ -49,3 +49,5 @@
     console.log(`El signo que ingresaste no existe.`)
     break
 }
+
+alert('hola')

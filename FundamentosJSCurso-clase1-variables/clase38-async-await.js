@@ -24,7 +24,8 @@ function onError(id) {
 async function obtenerPersonajes() {
 	var ids = [1, 2, 3, 4, 5, 6, 7]
 	var promesas = ids.map( id => obtenerPersonaje(id))
-	try {
+    //acá va toda la parte asincrona 
+    try {
 		var personajes = await Promise.all(promesas)
 		console.log(personajes)
 	} catch (id) {

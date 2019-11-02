@@ -9,21 +9,23 @@
 
 
 	<script type="text/javascript">
-		// function crearSaludo(finalDeFrase) {
-		// 	return function(nombre) {
-		// 		//function anonima
-		// 		console.log(`hola ${nombre} ${finalDeFrase}`)
-		// 		//finalDeFrase y nombre --> son las variables que pueden utilizarse en la función closure 
-		// 	}
+		function crearSaludo(finalDeFrase) {
+			return function(nombre) {
+				//function anonima
+				console.log(`hola ${nombre} ${finalDeFrase}`)
+				//finalDeFrase y nombre --> son las variables que pueden utilizarse en la función closure 
+			}
 
-		// }
-		// const saludoArgentino = crearSaludo('che')
-		// const saludoMexicano = crearSaludo('güey')
-		// const saludoColombiano = crearSaludo('amigo')
+		}
+		//esto retorna  la funcion saludoArgetino y es ahi donde le pasamos el nombre es la clave y crearSaludo pega el 
+		//parametro finalDeFrase que es el que pasamos en la const s
+		const saludoArgentino = crearSaludo('che')
+		const saludoMexicano = crearSaludo('güey')
+		const saludoColombiano = crearSaludo('amigo')
 		
-		// saludoArgentino('Sacha') //Hola Sacha che
-		// saludoMexicano('Sacha') //Hola Sacha güey
-		// saludoColombiano('Sacha') //Hola Sacha amigo
+		saludoArgentino('Sacha') //Hola Sacha che
+		saludoMexicano('Sacha') //Hola Sacha güey
+		saludoColombiano('Sacha') //Hola Sacha amigo
 
 		// :::cambiando nombre
 		// function saludopersonal(pais) {
