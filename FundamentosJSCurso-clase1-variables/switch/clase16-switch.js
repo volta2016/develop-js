@@ -50,4 +50,6 @@
     break
 }
 
-alert('hola')
+// alert('hola')
+
+var a = 'Hola'

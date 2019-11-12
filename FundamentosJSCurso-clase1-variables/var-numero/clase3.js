@@ -10,11 +10,17 @@ peso += sandwich;
 var jugarAlFutbol = 3;
 peso -= jugarAlFutbol;
 
+//ejemplo con decimales
 var precioDeVino = 200.3
 var total = Math.round(precioDeVino * 100 * 3) / 100;
+//Math.round funcion matemática
+// Math.round redondea modulo de matemáticas(readondeames esto que sta acá) y luego dividelo x 100
 var totalStr = total.toFixed(2); 
+siempre ten en cuenta 2 decimales después de la, 
 var total2 = parseFloat(totalStr);
-
+//parseFloat llama el numero flotante es decir de decimales
+//parse significa transformar leer de un string a un decimal en este caso
+//Convierte (parsea) un argumento de tipo cadena y devuelve un número de punto flotante.
 var pizza = 8;
 var personas = 2;
 var catidadDePorcionesPorPersonas = pizza / personas;

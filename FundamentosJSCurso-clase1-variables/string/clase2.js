@@ -1,7 +1,7 @@
 var nombre = 'Sacha', apellido = 'Lifszyc'
 var ultimaLetra = nombre.charAt(nombre.length - 1)
 
-
+var nombreYApellido = `${nombre} ${apellido}`
 var nombreEnMayusculas = nombre.toUpperCase()
 var apellidoEnMinusculas = apellido.toLowerCase()
 
@@ -11,7 +11,7 @@ var ultimaletra2 = nombre.charAt(cantidadDeLetrasDelNombre - 1);
 
 var str_b = nombre.substr(1, 4)
 
-var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
+var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`//dentro de etsa llamaves podemos escribir codigo js
 var str = nombre.charAt(0) + ' ' + nombreCompleto.charAt(2) //accede a S y c
 console.log(`nombre ` + `${nombre}`)
 var nombre_2 = 'kiot'
